@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#a8ce3b</color>
+    <color name="colorPrimaryDark">#9bb626</color>
+    <color name="colorAccent">#1d9eff</color>
+    <color name="textBlackColor">#ff4a4b4c</color>
+    <color name="textprimaryColor">#ff515151</color>
+    <color name="textGrayColor">#7b7a7a</color>
+    <color name="viewBackground">#837b7a7a</color>
+    <color name="barBackground">#43bebebe</color>
+
+    <color name="disableItem">#ffe6e9db</color>
+    <color name="backgroundScreens">#f3f2f5</color>
+
+
+    <color name="orderCompleted">#ffa8cd3f</color>
+    <color name="orderProgress">#ffcdac3f</color>
+    <color name="orderCanceled">#ffd75a4a</color>
+</resources>

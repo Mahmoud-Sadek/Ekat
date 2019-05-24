@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundScreens"
+    android:fitsSystemWindows="true">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/base_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <include
+        android:id="@+id/include_search"
+        layout="@layout/search_layout"
+        app:layout_constraintTop_toBottomOf="@+id/include"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/include_search">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginBottom="120dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_230sdp"
+                android:background="@android:color/white">
+
+                <ImageView
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/logo"
+                    android:visibility="visible" />
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/home_slider_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:focusable="true"
+                    android:nestedScrollingEnabled="true" />
+
+                <com.sadek.ekatapp.view.CircleIndicator2
+                    android:id="@+id/home_slider_indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/bottun_primary"
+                    android:padding="8dp"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_33sdp"
+                android:layout_margin="4dp"
+                android:elevation="4dp"
+                app:cardCornerRadius="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:padding="10dp"
+                    android:textSize="17sp"
+                    android:text="@string/main_categories"
+                    android:textStyle="bold" />
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/home_categories_recycler"
+                android:layout_width="match_parent"
+                android:layout_margin="4dp"
+                android:layout_height="wrap_content" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_33sdp"
+                android:layout_margin="4dp"
+                android:elevation="4dp"
+                app:cardCornerRadius="4dp">
+
+                <LinearLayout
+                    android:id="@+id/home_first_category_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/home_first_category_txt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:text="مستلزمات الطيور"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/home_first_category_see_all_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/show_all"
+                        android:textColor="@color/colorAccent" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_chevron_left_black_24dp" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <ImageView
+                android:id="@+id/home_first_category_img"
+                android:layout_width="match_parent"
+                android:layout_height="258dp"
+                android:layout_margin="4dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/logo" />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/home_first_category_recycler"
+                android:layout_width="match_parent"
+                android:layout_margin="4dp"
+                android:layout_height="wrap_content" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_33sdp"
+                android:layout_margin="4dp"
+                android:elevation="4dp"
+                app:cardCornerRadius="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:padding="10dp"
+                    android:text="@string/new_offers"
+                    android:textStyle="bold" />
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/home_new_offers_recycler"
+                android:layout_width="match_parent"
+                android:layout_margin="4dp"
+                android:layout_height="wrap_content" />
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_33sdp"
+                android:layout_margin="4dp"
+                android:elevation="4dp"
+                app:cardCornerRadius="4dp">
+
+                <LinearLayout
+                    android:id="@+id/home_second_category_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/home_second_category_txt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:text="كلاب"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/home_second_category_see_all_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/show_all"
+                        android:textColor="@color/colorAccent" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_chevron_left_black_24dp" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <ImageView
+                android:id="@+id/home_second_category_img"
+                android:layout_width="match_parent"
+                android:layout_height="258dp"
+                android:scaleType="fitXY"
+                android:layout_margin="4dp"
+                android:src="@drawable/logo" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/home_second_category_recycler"
+                android:layout_width="match_parent"
+                android:layout_margin="4dp"
+                android:layout_height="wrap_content" />
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_33sdp"
+                android:layout_margin="4dp"
+                android:elevation="4dp"
+                app:cardCornerRadius="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:padding="10dp"
+                    android:text="@string/you_may_like"
+                    android:textStyle="bold" />
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/home_may_like_recycler"
+                android:layout_width="match_parent"
+                android:layout_margin="4dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="#4fA8f1"
+                android:text="تابعنا علي تويتر"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="#f67054"
+                android:text="تابعنا علي انستقرام"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="#485793"
+                android:text="تابعنا علي فيس بوك"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.constraint.ConstraintLayout>

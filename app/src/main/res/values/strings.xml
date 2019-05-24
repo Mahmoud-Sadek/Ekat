@@ -1,0 +1,126 @@
+<resources>
+    <string name="app_name">Ekat App</string>
+    <string name="menu" translatable="false">القائمة</string>
+    <string name="search" translatable="false">بحث</string>
+    <string name="main_categories">اهم الاقسام</string>
+    <string name="show_all">عرض الكل</string>
+    <string name="new_offers">احدث العروض</string>
+    <string name="you_may_like">قد يعجبك ايضاَ</string>
+    <string name="product_detail">تفاصيل المنتج</string>
+    <string name="color">اللون</string>
+    <string name="size">الحجم</string>
+    <string name="ruler">المقاس</string>
+    <string name="more_details_about">تفاصيل اكثر عن </string>
+    <string name="buy_now">اشترى الان</string>
+    <string name="add_to_cart">اضف الى السلة</string>
+    <string name="filter">تصنيف</string>
+    <string name="email">البريد الالكتروني</string>
+    <string name="password">كلمة السر</string>
+    <string name="forget_password">نسيت كلمة المرور !</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="create_account">انشاء حساب؟</string>
+    <string name="name">الاسم</string>
+    <string name="phone">رقم الهاتف</string>
+    <string name="have_read">لقد قرأت ووافقت على </string>
+    <string name="privacy_policy">الشروط والاحكام</string>
+    <string name="register">تسجيل حساب</string>
+    <string name="reset_password">استعادة كلمة المرور</string>
+    <string name="enter_email_you_sign_in">ادخل البريد الالكترونى الذي تسجل به الدخول</string>
+    <string name="enter_code_sent_to_mail">ادخل الرمز الذي ارسل اليك عبر البريد الالكتروني</string>
+    <string name="enter_code_sent_to_phone">ادخل الرمز الذي ارسل اليك عبر رقم الهاتف</string>
+    <string name="enter_code">ادخل الرمز</string>
+    <string name="continue_progress">اكمل العملية</string>
+    <string name="resent_code">اعادة ارسال الرمز</string>
+    <string name="enter_new_password">ادخل كلمة المرور الجديدة</string>
+    <string name="reenter_password">اعد ادخال كلمة المرور</string>
+    <string name="home">الرئيسية</string>
+    <string name="profile">حسابي</string>
+    <string name="cart">عربة التسوق</string>
+    <string name="my_orders">طلباتي</string>
+    <string name="my_info">معلوماتي</string>
+    <string name="order_completed">مكتمل</string>
+    <string name="order_in_progress">جارى التوصيل</string>
+    <string name="order_canceled">لم يكتمل</string>
+    <string name="edit">تعديل</string>
+    <string name="order_items">عناصر الطلب</string>
+    <string name="order_status">حالة الطلب</string>
+    <string name="order_date">تاريخ الطلب</string>
+    <string name="order_number">رقم الطلب</string>
+    <string name="order_price">قيمة الطلب</string>
+    <string name="prices">المجموع</string>
+    <string name="shipping_charges">تكلفة الشحن</string>
+    <string name="cash_on_delivery">الدفع عند الاستلام</string>
+    <string name="total">الاجمالى</string>
+    <string name="delivery_address">عنوان التوصيل</string>
+    <string name="address_name">الاسم</string>
+    <string name="address_phone">رقم التليفون</string>
+    <string name="address_country">الدولة</string>
+    <string name="address_city">المدينة</string>
+    <string name="address_region">المنطقة</string>
+    <string name="address_notes">ملاحظات</string>
+    <string name="description">الوصف</string>
+    <string name="confirm">تأكيد</string>
+    <string name="confirm_phone_number">تأكيد رقم الهاتف</string>
+    <string name="add_ads_free">اضف إعلانك مجانا</string>
+    <string name="animal_garden_service">خدمات حدائق الحيوانات</string>
+    <string name="enter_valid_email">البريد الالكترونى غير صالح</string>
+    <string name="enter_valid_password">كلمة المرور غير صالحة</string>
+    <string name="enter_valid_name">الاسم غير صالح</string>
+    <string name="enter_valid_phone">رقم هاتف غير صالح</string>
+    <string name="login_q">تسجيل الدخول ؟</string>
+    <string name="enter_valid_code">كود غير صالح</string>
+    <string name="post_details">عنوان الاعلان</string>
+    <string name="post_details_ex">مثال قط شرازي</string>
+    <string name="choose_section">اختار القسم</string>
+    <string name="price_required">السعر المطلوب</string>
+    <string name="ad_description">تفاصيل الاعلان</string>
+    <string name="ad_description_ex">مثلا العمر - الحالة الصحية - الكمية - الخ ..</string>
+    <string name="can_upload_more_than_one_image">يمكن تحميل اكثر من صورة</string>
+    <string name="uploading_photos_will_increase_views_over_your_ad">تزيد من فرصه المشاهدات</string>
+    <string name="by_submitting_your_ad_you_agree_to_our">بنشر الاعلان انت توافق علي</string>
+    <string name="add_ads">اضف اعلانك</string>
+    <string name="download">تحميل</string>
+    <string name="attach_a_picture_of_the_required_animal">ارفق صورة للحيوان المطلوب</string>
+    <string name="animal_wanted">طلب شراء حيوانات</string>
+    <string name="our_service">خدماتنا</string>
+    <string name="help">المساعدة</string>
+    <string name="logout">تسجيل خروج</string>
+    <string name="arabic">العربية</string>
+    <string name="country">الدولة</string>
+    <string name="notifications">الاشعارات</string>
+    <string name="continue_shopping">متابعة التسوق</string>
+    <string name="progress_to_end_the_order">التقدم لانهاء الطلب</string>
+
+    <string name="shopping_cart">عربة التسوق</string>
+    <string name="city">المدينة</string>
+    <string name="location">المنطقة</string>
+    <string name="select_countrys">اختار الدولة</string>
+    <string name="select_city">اختار المدينة</string>
+    <string name="what_want_to_advertise">ما الذي تريد الاعلان عنه؟</string>
+
+
+    <string-array name="country_array">
+        <item>الامارات</item>
+        <item>مصر</item>
+        <item>السعودية</item>
+        <item>البحرين</item>
+        <item>العراق</item>
+        <item>الكويت</item>
+    </string-array>
+    <string-array name="city_array">
+        <item>الامارات</item>
+        <item>مصر</item>
+        <item>السعودية</item>
+        <item>البحرين</item>
+        <item>العراق</item>
+        <item>الكويت</item>
+    </string-array>
+    <string-array name="location_array">
+        <item>الامارات</item>
+        <item>مصر</item>
+        <item>السعودية</item>
+        <item>البحرين</item>
+        <item>العراق</item>
+        <item>الكويت</item>
+    </string-array>
+</resources>
