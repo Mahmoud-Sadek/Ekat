@@ -46,7 +46,10 @@
                     android:layout_weight="1"
                     android:background="@android:color/transparent"
                     android:hint="@string/post_details_ex"
+                    android:textColorHint="@color/viewBackground"
                     android:inputType="text"
+                    fontPath="fonts/BCN_Medium.otf"
+                    tools:ignore="MissingPrefix"
                     android:padding="6dp"
                     android:textSize="13sp" />
             </LinearLayout>
@@ -76,10 +79,13 @@
                         android:layout_height="match_parent"
                         android:layout_marginStart="6dp"
                         android:background="@android:color/transparent"
+                        android:textColorHint="@color/viewBackground"
                         android:gravity="center_vertical"
                         android:hint="@string/what_want_to_advertise"
                         android:padding="4dp"
-                        android:textSize="16sp" />
+                        fontPath="fonts/BCN_Medium.otf"
+                        tools:ignore="MissingPrefix"
+                        android:textSize="14sp" />
 
                     <Spinner
                         android:id="@+id/ad_adv_category_spinner"
@@ -112,7 +118,7 @@
                     android:background="@android:color/transparent"
                     android:inputType="number"
                     android:padding="6dp"
-                    fontPath="fonts/VertigoFLF.ttf"
+                    fontPath="fonts/BCN_Medium.otf"
                     tools:ignore="MissingPrefix"
                     android:textSize="13sp" />
             </LinearLayout>
@@ -140,6 +146,9 @@
                     android:hint="@string/ad_description_ex"
                     android:inputType="textMultiLine"
                     android:lines="8"
+                    fontPath="fonts/BCN_Medium.otf"
+                    tools:ignore="MissingPrefix"
+                    android:textColorHint="@color/viewBackground"
                     android:maxLines="10"
                     android:minLines="4"
                     android:padding="6dp"
@@ -154,7 +163,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="14dp"
                 android:text="@string/can_upload_more_than_one_image"
-                android:textColor="#ff555555"
+                android:textColor="@color/viewBackground"
                 android:textSize="13sp"
                 android:textStyle="bold" />
 
@@ -162,7 +171,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/uploading_photos_will_increase_views_over_your_ad"
-                android:textColor="#ff555555"
+                android:textColor="@color/viewBackground"
                 fontPath="fonts/GE_SS_Two_Light.otf"
                 android:textSize="11sp"
                 tools:ignore="MissingPrefix" />
@@ -190,7 +199,7 @@
                     android:layout_gravity="center"
                     android:text="@string/download"
                     android:textColor="@android:color/white"
-                    android:textSize="24sp" />
+                    android:textSize="22sp" />
             </FrameLayout>
 
 
@@ -228,9 +237,14 @@
                     android:background="@android:color/transparent"
                     android:hint="@string/name"
                     android:inputType="text"
+                    fontPath="fonts/BCN_Medium.otf"
+                    tools:ignore="MissingPrefix"
+                    android:textColorHint="@color/viewBackground"
                     android:padding="4dp"
                     android:textSize="16sp" />
             </LinearLayout>
+
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -263,11 +277,12 @@
                         android:layout_marginStart="6dp"
                         android:layout_weight="1"
                         android:background="@android:color/transparent"
-                        android:gravity="end"
-                        fontPath="fonts/VertigoFLF.ttf"
+                        android:gravity="end|center"
+                        fontPath="fonts/BCN_Medium.otf"
                         tools:ignore="MissingPrefix"
                         android:hint="@string/phone"
                         android:inputType="phone"
+                        android:textColorHint="@color/viewBackground"
                         android:padding="4dp"
                         android:textSize="16sp" />
                 </LinearLayout>
@@ -280,6 +295,8 @@
                     android:layout_gravity="center"
                     android:layout_margin="2dp"
                     app:ccp_hideNameCode="true"
+                    fontPath="fonts/BCN_Medium.otf"
+                    tools:ignore="MissingPrefix"
                     app:ccp_defaultNameCode="EG" />
             </LinearLayout>
 
@@ -307,12 +324,16 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="6dp"
                     android:layout_weight="1"
+                    fontPath="fonts/BCN_Medium.otf"
+                    tools:ignore="MissingPrefix"
                     android:background="@android:color/transparent"
                     android:hint="@string/email"
+                    android:textColorHint="@color/viewBackground"
                     android:inputType="textEmailAddress"
                     android:padding="4dp"
                     android:textSize="16sp" />
             </LinearLayout>
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -338,6 +359,26 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1">
 
+                    <TextView
+                        android:id="@+id/add_adv_city_txt_"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="6dp"
+                        android:background="@android:color/transparent"
+                        android:gravity="center_vertical"
+                        android:hint="@string/city"
+                        android:inputType="text"
+                        android:visibility="gone"
+                        android:textColor="@color/viewBackground"
+                        android:padding="4dp"
+                        android:textSize="16sp" />
+
+                    <Spinner
+                        android:id="@+id/register_city_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
 
                     <EditText
                         android:id="@+id/register_city_txt"
@@ -346,11 +387,15 @@
                         android:layout_marginStart="6dp"
                         android:background="@android:color/transparent"
                         android:hint="@string/city"
+                        android:textColorHint="@color/viewBackground"
                         android:inputType="text"
                         android:padding="4dp"
+                        fontPath="fonts/BCN_Medium.otf"
+                        tools:ignore="MissingPrefix"
                         android:textSize="16sp" />
                 </FrameLayout>
             </LinearLayout>
+
 
 
             <LinearLayout
@@ -392,18 +437,30 @@
                     android:visibility="gone" />
             </LinearLayout>
 
-            <Button
+            <android.support.v7.widget.CardView
                 android:id="@+id/login_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="35dp"
                 android:layout_marginRight="15dp"
-                android:background="@drawable/bottun_primary"
-                android:text="@string/add_ads"
-                android:textColor="@android:color/white"
-                android:textSize="22sp"
-                android:textStyle="bold" />
+                android:elevation="@dimen/_6sdp"
+                android:layout_marginBottom="15dp"
+                app:cardCornerRadius="@dimen/_6sdp"
+                app:cardElevation="@dimen/_4sdp"
+                app:cardBackgroundColor="@color/colorPrimary"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/add_ads"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/_6sdp"
+                    android:textStyle="bold"/>
+
+            </android.support.v7.widget.CardView>
 
 
         </LinearLayout>

@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.sadek.ekatapp.R;
 import com.sadek.ekatapp.activity.MainActivity;
@@ -22,6 +23,8 @@ public class ForgetPasswordCodeFragment extends Fragment {
     @BindView(R.id.forget_password_code_txt)
     EditText forget_password_code_txt;
 
+    @BindView(R.id.tabTxt)
+    TextView tabTxt;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -36,7 +39,7 @@ public class ForgetPasswordCodeFragment extends Fragment {
     }
 
     private void initUI() {
-
+        tabTxt.setText("");
     }
 
 

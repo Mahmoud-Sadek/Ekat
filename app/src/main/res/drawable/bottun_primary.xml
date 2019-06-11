@@ -5,9 +5,9 @@
         <ripple android:color="#a89bb626">
             <item>
                 <shape>
-                    <solid android:color="#9bb626" />
+                    <solid android:color="@color/colorPrimary" />
                     <stroke android:width="2dp" android:color="#00000000" />
-                    <corners android:radius="8dp" />
+                    <corners android:radius="10dp" />
                 </shape>
             </item>
         </ripple>

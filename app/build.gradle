@@ -56,10 +56,10 @@ dependencies {
     implementation 'com.github.joielechong:countrycodepicker:2.3.0'
 
     //seekbar
-    implementation 'com.github.sephiroth74:RangeSeekBar:1.1.0'
+    implementation 'me.bendik.simplerangeview:simplerangeview:0.2.0'
 
-     //search
-    implementation 'com.github.arimorty:floatingsearchview:2.1.1'
+//     //search
+//    implementation 'com.github.arimorty:floatingsearchview:2.1.1'
 
     implementation('com.crashlytics.sdk.android:crashlytics:2.10.0@aar') {
         transitive = true;
@@ -74,7 +74,24 @@ dependencies {
     //upload image library
     implementation 'com.github.jrvansuita:PickImage:2.2.4'
 
+    // JSON Converter
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.3.0'
+
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.10.0'
+    implementation 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
+
+    //dialog
+    implementation 'com.github.Shashank02051997:FancyAlertDialog-Android:0.1'
+    implementation 'com.github.andyxialm:ColorDialog:1.0.0'
+
+    // Realm
+//    implementation 'io.realm:realm-android:0.82.1'
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
+
+apply plugin: 'realm-android'

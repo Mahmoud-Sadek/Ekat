@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.sadek.ekatapp.R;
+import com.sadek.ekatapp.interfaces.CartInterface;
 import com.sadek.ekatapp.model.CartModel;
 import com.sadek.ekatapp.model.NotificationsModel;
 import com.squareup.picasso.Picasso;
@@ -19,16 +20,22 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import io.realm.Realm;
+import io.realm.RealmResults;
 
 public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
 
     private List<CartModel> contents;
     private Context mContext;
     private int row_index = 0;
+//    Realm realm;
+    CartInterface cartInterface;
 
-    public CartAdapter(List<CartModel> contents, Context mContext) {
+    public CartAdapter(List<CartModel> contents, Context mContext, CartInterface cartInterface) {
         this.contents = contents;
         this.mContext = mContext;
+//        realm = Realm.getDefaultInstance();
+        this.cartInterface = cartInterface;
     }
 
 
@@ -56,19 +63,30 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
 
         Picasso.with(mContext).load(contents.get(position).getImage()).into(holder.cart_item_image);
         holder.cart_item_name_txt.setText(contents.get(position).getName());
-        holder.cart_item_price_txt.setText(contents.get(position).getPrice());
+        holder.cart_item_price_txt.setText(Double.parseDouble(contents.get(position).getPrice())*Double.parseDouble(contents.get(position).getQuantity())+mContext.getString(R.string.a_e_d));
         holder.number_button_value_txt.setText(contents.get(position).getQuantity());
 
         holder.item_cart_delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                contents.remove(position);
-                notifyDataSetChanged();
+
+                deleteRecord(contents.get(position).getId());
+//                contents.remove(position);
+//                notifyDataSetChanged();
             }
         });
 
     }
-
+    public void deleteRecord(int id){
+        cartInterface.onItemRemoves(id);
+//        RealmResults<CartModel> results = realm.where(CartModel.class).equalTo("id", id).findAll();
+//
+//        realm.beginTransaction();
+//
+//        results.deleteAllFromRealm();
+//
+//        realm.commitTransaction();
+    }
     static class ViewHolder extends RecyclerView.ViewHolder {
 
         @BindView(R.id.item_cart_delete)

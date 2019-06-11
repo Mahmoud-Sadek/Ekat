@@ -70,44 +70,68 @@
                     android:tint="@android:color/white" />
 
                 <EditText
-                    android:id="@+id/login_email_txt"
+                    android:id="@+id/confirm_phone_code_txt"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@android:color/transparent"
-                    fontPath="fonts/VertigoFLF.ttf"
+                    fontPath="fonts/BCN_Medium.otf"
                     tools:ignore="MissingPrefix"
                     android:hint="@string/enter_code"
                     android:inputType="text"
-                    android:padding="4dp" />
+                    android:padding="4dp"
+                    android:textSize="14sp"/>
             </LinearLayout>
 
-
-            <Button
-                android:id="@+id/continue_btn"
+            <android.support.v7.widget.CardView
+                android:id="@+id/confirm_phone_code_continue_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="35dp"
                 android:layout_marginRight="15dp"
-                android:background="@drawable/bottun_primary"
-                android:text="@string/continue_progress"
-                android:textColor="@android:color/white"
-                android:textSize="22sp"
-                android:textStyle="bold" />
+                android:elevation="@dimen/_6sdp"
+                app:cardCornerRadius="@dimen/_6sdp"
+                app:cardElevation="@dimen/_4sdp"
+                app:cardBackgroundColor="@color/colorPrimary"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/continue_progress"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/_6sdp"
+                    android:textStyle="bold"/>
 
-            <Button
-                android:id="@+id/resent_code_btn"
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/confirm_phone_code_resent_code_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginRight="15dp"
-                android:background="@drawable/bottun_primary"
-                android:text="@string/resent_code"
-                android:textColor="@android:color/white"
-                android:textSize="22sp"
-                android:textStyle="bold" />
+                android:elevation="@dimen/_6sdp"
+                app:cardCornerRadius="@dimen/_6sdp"
+                app:cardElevation="@dimen/_4sdp"
+                android:layout_marginBottom="15dp"
+                app:cardBackgroundColor="@color/colorPrimary"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/resent_code"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/_6sdp"
+                    android:textStyle="bold"/>
+
+            </android.support.v7.widget.CardView>
+
 
         </LinearLayout>
 

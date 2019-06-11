@@ -12,6 +12,6 @@
         android:ellipsize="marquee"
         android:singleLine="true"
         android:text="@string/location"
-        android:textColor="#808080"
+        android:textColor="@color/viewBackground"
         android:textSize="18sp" />
 </android.support.constraint.ConstraintLayout>

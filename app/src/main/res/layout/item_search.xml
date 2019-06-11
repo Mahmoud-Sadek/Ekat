@@ -28,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="140"
-            fontPath="fonts/VertigoFLF.ttf"
+            fontPath="fonts/BCN_Medium.otf"
             tools:ignore="MissingPrefix"
             android:textStyle="bold"
             android:textColor="@color/textprimaryColor"
@@ -41,6 +41,6 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="2dp"
         android:layout_marginRight="8dp"
-        android:background="@color/light_gray" />
+        android:background="@color/disableItem" />
 
 </LinearLayout>

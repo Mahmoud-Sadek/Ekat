@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#a8ce3b</color>
-    <color name="colorPrimaryDark">#9bb626</color>
+    <color name="colorPrimary">#a9ce3c</color>
+    <color name="colorPrimaryDark">#a8ce3b</color>
     <color name="colorAccent">#1d9eff</color>
-    <color name="textBlackColor">#ff4a4b4c</color>
+    <color name="textBlackColor">#6a6b6c</color>
     <color name="textprimaryColor">#ff515151</color>
-    <color name="textGrayColor">#7b7a7a</color>
-    <color name="viewBackground">#837b7a7a</color>
-    <color name="barBackground">#43bebebe</color>
+    <color name="textGrayColor">#9c9b9b</color>
+    <color name="viewBackground">#589b9b9b</color>
+    <color name="barBackground">#36bebebe</color>
 
     <color name="disableItem">#ffe6e9db</color>
     <color name="backgroundScreens">#f3f2f5</color>

@@ -1,5 +1,6 @@
 package com.sadek.ekatapp.fragment;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -18,6 +19,7 @@ import com.sadek.ekatapp.adapter.MainCategoryAdapter;
 import com.sadek.ekatapp.adapter.OfferAdapter;
 import com.sadek.ekatapp.adapter.SliderAdapter;
 import com.sadek.ekatapp.adapter.SubCategoryAdapter;
+import com.sadek.ekatapp.model.CartModel;
 import com.sadek.ekatapp.model.MainCategoriesModel;
 import com.sadek.ekatapp.model.ProductModel;
 import com.sadek.ekatapp.model.SliderModel;
@@ -32,6 +34,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
+import io.realm.Realm;
+import io.realm.RealmResults;
 
 
 public class MainFragment extends Fragment {
@@ -72,6 +76,9 @@ public class MainFragment extends Fragment {
     RecyclerView home_may_like_recycler;
 
 
+    @BindView(R.id.cart_number)
+    TextView cart_number;
+
     SliderAdapter sliderAdapter;
     List<SliderModel> sliderModelList;
 
@@ -91,6 +98,8 @@ public class MainFragment extends Fragment {
     HomeProductAdapter homeProductAdapter;
     List<ProductModel> productModelList;
 
+    Realm realm;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_main, container, false);
@@ -99,7 +108,11 @@ public class MainFragment extends Fragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+
         unbinder = ButterKnife.bind(this, view);
+
+        realm = Realm.getDefaultInstance();
         initUI();
     }
 
@@ -173,13 +186,13 @@ public class MainFragment extends Fragment {
         offerList.add(new SliderModel("https://www.ekat.ae/wp-content/uploads/2019/01/Untitled-3-247x296.jpg"));
 
         mainCategoriesModelList.add(new MainCategoriesModel("https://www.ekat.ae/wp-content/uploads/2018/12/2018-12-18_03-03-17-2.jpg", "كلاب"));
-        mainCategoriesModelList.add(new MainCategoriesModel("https://www.ekat.ae/wp-content/uploads/2018/12/2018-12-18_03-03-17-1.jpg", "قطط"));
-        mainCategoriesModelList.add(new MainCategoriesModel("https://www.ekat.ae/wp-content/uploads/2018/12/2018-12-18_03-03-17.jpg", "طيور"));
+        mainCategoriesModelList.add(new MainCategoriesModel("https://www.ekat.ae/wp-content/uploads/2019/01/gromming-247x296.jpg", "قطط"));
+        mainCategoriesModelList.add(new MainCategoriesModel("https://www.ekat.ae/wp-content/uploads/2018/12/Golden-Pheasant-247x296.jpg", "طيور"));
         mainCategoriesModelList.add(new MainCategoriesModel("https://www.ekat.ae/wp-content/uploads/2018/12/2018-12-18_03-03-17-2.jpg", "كلاب"));
         mainCategoriesModelList.add(new MainCategoriesModel("https://www.ekat.ae/wp-content/uploads/2018/12/2018-12-18_03-03-17-1.jpg", "قطط"));
-        mainCategoriesModelList.add(new MainCategoriesModel("https://www.ekat.ae/wp-content/uploads/2018/12/2018-12-18_03-03-17.jpg", "طيور"));
+        mainCategoriesModelList.add(new MainCategoriesModel("https://www.ekat.ae/wp-content/uploads/2018/12/Golden-Pheasant-247x296.jpg", "طيور"));
 
-        Picasso.with(getContext()).load("https://www.ekat.ae/wp-content/uploads/2018/12/2018-12-18_03-03-17.jpg").into(home_first_category_img);
+        Picasso.with(getContext()).load("https://www.ekat.ae/wp-content/uploads/2018/12/Golden-Pheasant-247x296.jpg").into(home_first_category_img);
         Picasso.with(getContext()).load("https://www.ekat.ae/wp-content/uploads/2018/12/2018-12-18_03-03-17-2.jpg").into(home_second_category_img);
 
 
@@ -209,6 +222,14 @@ public class MainFragment extends Fragment {
         productModelList.add(new ProductModel("https://www.ekat.ae/wp-content/uploads/2019/04/B12-247x296.jpg", "كلاب", "120 ر.ا", "وصل حديثاَ"));
         productModelList.add(new ProductModel("https://www.ekat.ae/wp-content/uploads/2019/04/epi-soothe-247x296.jpg", "كلاب", "120 ر.ا", "وصل حديثاَ"));
         productModelList.add(new ProductModel("https://www.ekat.ae/wp-content/uploads/2019/04/VIBRAC0A-247x296.jpg", "كلاب", "120 ر.ا", "وصل حديثاَ"));
+
+
+        if (cartNumber() == 0) {
+            cart_number.setVisibility(View.GONE);
+        } else {
+            cart_number.setVisibility(View.VISIBLE);
+            cart_number.setText(cartNumber() + "");
+        }
 
 
     }
@@ -243,4 +264,9 @@ public class MainFragment extends Fragment {
         ((MainActivity)getContext()).switchToPage(3, null, R.string.app_name);
     }
 
+
+    public int cartNumber() {
+        RealmResults<CartModel> results = realm.where(CartModel.class).findAll();
+        return ((RealmResults) results).size();
+    }
 }

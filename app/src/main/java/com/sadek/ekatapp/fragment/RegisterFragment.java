@@ -1,5 +1,6 @@
 package com.sadek.ekatapp.fragment;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -13,6 +14,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.rilixtech.Country;
+import com.rilixtech.CountryCodePicker;
 import com.sadek.ekatapp.R;
 import com.sadek.ekatapp.activity.MainActivity;
 import com.sadek.ekatapp.adapter.NothingSelectedSpinnerAdapter;
@@ -35,6 +38,8 @@ public class RegisterFragment extends Fragment {
     EditText register_password_txt;
     @BindView(R.id.register_phone_txt)
     EditText register_phone_txt;
+    @BindView(R.id.ccp)
+    CountryCodePicker ccp;
     @BindView(R.id.register_country_spinner)
     Spinner register_country_spinner;
     @BindView(R.id.register_city_spinner)
@@ -142,15 +147,19 @@ public class RegisterFragment extends Fragment {
                         // R.layout.contact_spinner_nothing_selected_dropdown, // Optional
                         getContext()));
 
+
+        Typeface typeFace=Typeface.createFromAsset(getContext().getAssets(),"fonts/BCN_Medium.otf");
+        ccp.setTypeFace(typeFace);
     }
+
 
 
     //register_city_txt_
     @OnClick(R.id.register_city_txt_)
     void register_city_txt_(View view) {
         Toast.makeText(getContext(), R.string.select_countrys, Toast.LENGTH_SHORT).show();
-    }//register_city_txt_
-
+    }
+    //register_city_txt_
     @OnClick(R.id.register_location_txt_)
     void register_location_txt_(View view) {
         Toast.makeText(getContext(), R.string.select_city, Toast.LENGTH_SHORT).show();

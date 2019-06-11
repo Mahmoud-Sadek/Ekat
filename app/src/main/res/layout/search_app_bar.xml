@@ -40,7 +40,7 @@
                 android:layout_margin="8dp"
                 android:layout_height="match_parent"
                 android:background="@drawable/search_background">
-
+<!--
             <com.arlib.floatingsearchview.FloatingSearchView
                 android:id="@+id/floating_search_view"
                 android:layout_width="match_parent"
@@ -53,7 +53,7 @@
                 app:floatingSearch_hintTextColor="@android:color/white"
                 app:floatingSearch_searchHint="@string/search"
                 app:floatingSearch_showSearchKey="true"
-                app:floatingSearch_suggestionsListAnimDuration="250" />
+                app:floatingSearch_suggestionsListAnimDuration="250" />-->
             </FrameLayout>
         </LinearLayout>
     </android.support.v7.widget.Toolbar>

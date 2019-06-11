@@ -4,6 +4,7 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -16,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.rilixtech.CountryCodePicker;
 import com.sadek.ekatapp.R;
 import com.sadek.ekatapp.adapter.ImageAdapter;
 import com.sadek.ekatapp.model.ImageModel;
@@ -40,6 +42,10 @@ public class AnimalWantedFragment extends Fragment {
 
     @BindView(R.id.tabTxt)
     TextView tabTxt;
+
+
+    @BindView(R.id.ccp)
+    CountryCodePicker ccp;
 
     ImageAdapter imageAdapter;
     List<ImageModel> imageModelList;
@@ -67,6 +73,8 @@ public class AnimalWantedFragment extends Fragment {
         imageAdapter = new ImageAdapter(imageModelList, getContext());
         upload_images_recycler.setAdapter(imageAdapter);
 
+        Typeface typeFace=Typeface.createFromAsset(getContext().getAssets(),"fonts/BCN_Medium.otf");
+        ccp.setTypeFace(typeFace);
 
     }
     //app_bar_back_btn

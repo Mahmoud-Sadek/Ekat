@@ -12,7 +12,8 @@
         android:layout_margin="10dp"
         android:orientation="vertical"
         app:cardCornerRadius="4dp"
-        app:cardElevation="1dp">
+        app:cardElevation="1dp"
+        android:paddingBottom="@dimen/_10sdp">
 
         <android.support.v4.widget.NestedScrollView
             android:layout_width="match_parent"
@@ -23,8 +24,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="120dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_10sdp">
 
 
                 <LinearLayout
@@ -51,9 +52,12 @@
                         android:layout_height="match_parent"
                         android:layout_marginStart="6dp"
                         android:layout_weight="1"
+                        fontPath="fonts/BCN_Medium.otf"
+                        tools:ignore="MissingPrefix"
                         android:background="@android:color/transparent"
                         android:hint="@string/name"
                         android:inputType="text"
+                        android:textColorHint="@color/viewBackground"
                         android:padding="4dp"
                         android:textSize="16sp" />
                 </LinearLayout>
@@ -83,10 +87,13 @@
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_marginStart="6dp"
+                        fontPath="fonts/BCN_Medium.otf"
+                        tools:ignore="MissingPrefix"
                         android:layout_weight="1"
                         android:background="@android:color/transparent"
                         android:hint="@string/password"
                         android:inputType="textPassword"
+                        android:textColorHint="@color/viewBackground"
                         android:padding="4dp"
                         android:textAlignment="viewStart"
                         android:textSize="16sp" />
@@ -123,11 +130,12 @@
                             android:layout_marginStart="6dp"
                             android:layout_weight="1"
                             android:background="@android:color/transparent"
-                            android:gravity="end"
-                            android:hint="@string/phone"
-                            fontPath="fonts/VertigoFLF.ttf"
+                            android:textAlignment="viewStart"
+                            fontPath="fonts/BCN_Medium.otf"
                             tools:ignore="MissingPrefix"
+                            android:hint="@string/phone"
                             android:inputType="phone"
+                            android:textColorHint="@color/viewBackground"
                             android:padding="4dp"
                             android:textSize="16sp" />
                     </LinearLayout>
@@ -139,8 +147,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_margin="2dp"
-                        app:ccp_defaultNameCode="EG"
-                        app:ccp_hideNameCode="true" />
+                        app:ccp_hideNameCode="true"
+                        app:ccp_defaultNameCode="EG" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -167,8 +175,11 @@
                         android:layout_height="match_parent"
                         android:layout_marginStart="6dp"
                         android:layout_weight="1"
+                        fontPath="fonts/BCN_Medium.otf"
+                        tools:ignore="MissingPrefix"
                         android:background="@android:color/transparent"
                         android:hint="@string/email"
+                        android:textColorHint="@color/viewBackground"
                         android:inputType="textEmailAddress"
                         android:padding="4dp"
                         android:textSize="16sp" />
@@ -193,6 +204,19 @@
                         android:src="@drawable/ic_language"
                         android:tint="@android:color/white" />
 
+                    <EditText
+                        android:id="@+id/register_countery_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="6dp"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/country"
+                        android:textColorHint="@color/viewBackground"
+                        android:inputType="text"
+                        fontPath="fonts/BCN_Medium.otf"
+                        tools:ignore="MissingPrefix"
+                        android:padding="4dp"
+                        android:textSize="16sp" />
                     <FrameLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
@@ -202,7 +226,9 @@
                             android:id="@+id/register_country_spinner"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:textSize="16sp" />
+                            android:textSize="16sp"
+                            android:visibility="gone"
+                            />
                     </FrameLayout>
 
                 </LinearLayout>
@@ -240,6 +266,8 @@
                             android:gravity="center_vertical"
                             android:hint="@string/city"
                             android:inputType="text"
+                            android:visibility="gone"
+                            android:textColor="@color/viewBackground"
                             android:padding="4dp"
                             android:textSize="16sp" />
 
@@ -257,10 +285,12 @@
                             android:layout_marginStart="6dp"
                             android:background="@android:color/transparent"
                             android:hint="@string/city"
+                            android:textColorHint="@color/viewBackground"
                             android:inputType="text"
                             android:padding="4dp"
-                            android:textSize="16sp"
-                            android:visibility="gone" />
+                            fontPath="fonts/BCN_Medium.otf"
+                            tools:ignore="MissingPrefix"
+                            android:textSize="16sp" />
                     </FrameLayout>
                 </LinearLayout>
 
@@ -296,6 +326,8 @@
                             android:gravity="center_vertical"
                             android:hint="@string/location"
                             android:inputType="text"
+                            android:visibility="gone"
+                            android:textColor="@color/viewBackground"
                             android:padding="4dp"
                             android:textSize="16sp" />
 
@@ -314,26 +346,39 @@
                             android:background="@android:color/transparent"
                             android:hint="@string/location"
                             android:inputType="text"
+                            fontPath="fonts/BCN_Medium.otf"
+                            tools:ignore="MissingPrefix"
+                            android:textColorHint="@color/viewBackground"
                             android:padding="4dp"
-                            android:textSize="16sp"
-                            android:visibility="gone" />
+                            android:textSize="16sp" />
                     </FrameLayout>
                 </LinearLayout>
 
 
-                <Button
-                    android:id="@+id/register_btn"
+                <android.support.v7.widget.CardView
+                    android:id="@+id/login_btn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="35dp"
                     android:layout_marginRight="15dp"
-                    android:background="@drawable/bottun_primary"
-                    android:text="@string/edit"
-                    android:textColor="@android:color/white"
-                    android:textSize="22sp"
-                    android:textStyle="bold" />
+                    android:layout_marginBottom="15dp"
+                    android:elevation="@dimen/_6sdp"
+                    app:cardCornerRadius="@dimen/_6sdp"
+                    app:cardElevation="@dimen/_4sdp"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/edit"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        android:layout_gravity="center"
+                        android:padding="@dimen/_6sdp"
+                        android:textStyle="bold"/>
 
+                </android.support.v7.widget.CardView>
 
             </LinearLayout>
 

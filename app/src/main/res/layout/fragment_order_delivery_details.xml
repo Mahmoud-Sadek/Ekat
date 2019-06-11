@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/backgroundScreens"
+    android:fitsSystemWindows="true">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/green_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/include">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="120dp"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/text_background"
+                android:layoutDirection="rtl"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_margin="1dp"
+                    android:background="@color/colorPrimary"
+                    android:padding="4dp"
+                    android:src="@drawable/ic_avatar" />
+
+                <EditText
+                    android:id="@+id/order_delivery_name_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="6dp"
+                    fontPath="fonts/BCN_Medium.otf"
+                    tools:ignore="MissingPrefix"
+                    android:textColorHint="@color/viewBackground"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/name"
+                    android:inputType="text"
+                    android:padding="4dp"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:layoutDirection="rtl"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_margin="1dp"
+                        android:background="@color/colorPrimary"
+                        android:padding="4dp"
+                        android:src="@drawable/ic_phone_black_24dp" />
+
+                    <EditText
+                        android:id="@+id/order_delivery_phone_txt"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="6dp"
+                        android:layout_weight="1"
+                        android:textColorHint="@color/viewBackground"
+                        android:background="@android:color/transparent"
+                        fontPath="fonts/BCN_Medium.otf"
+                        tools:ignore="MissingPrefix"
+                        android:textAlignment="viewStart"
+                        android:hint="@string/phone"
+                        android:inputType="phone"
+                        android:padding="4dp"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+
+                <com.rilixtech.CountryCodePicker
+                    android:id="@+id/ccp"
+                    fontPath="fonts/BCN_Medium.otf"
+                    tools:ignore="MissingPrefix"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="2dp"
+                    app:ccp_defaultNameCode="EG"
+                    app:ccp_hideNameCode="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/text_background"
+                android:layoutDirection="rtl"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_margin="1dp"
+                    android:background="@color/colorPrimary"
+                    android:padding="4dp"
+                    android:src="@drawable/ic_email" />
+
+                <EditText
+                    android:id="@+id/order_delivery_email_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    fontPath="fonts/BCN_Medium.otf"
+                    tools:ignore="MissingPrefix"
+                    android:textColorHint="@color/viewBackground"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    android:padding="4dp"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/text_background"
+                android:layoutDirection="rtl"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_margin="1dp"
+                    android:background="@color/colorPrimary"
+                    android:padding="4dp"
+                    android:src="@drawable/ic_language"
+                    android:tint="@android:color/white" />
+
+                <EditText
+                    android:id="@+id/register_countery_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="6dp"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/country"
+                    android:textColorHint="@color/viewBackground"
+                    android:inputType="text"
+                    fontPath="fonts/BCN_Medium.otf"
+                    tools:ignore="MissingPrefix"
+                    android:padding="4dp"
+                    android:textSize="16sp" />
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Spinner
+                        android:id="@+id/order_delivery_country_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="16sp"
+                        android:visibility="gone"/>
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/text_background"
+                android:layoutDirection="rtl"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_margin="1dp"
+                    android:background="@color/colorPrimary"
+                    android:padding="4dp"
+                    android:src="@drawable/ic_city"
+                    android:tint="@android:color/white" />
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/order_delivery_city_txt_"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="6dp"
+                        android:background="@android:color/transparent"
+                        android:gravity="center_vertical"
+                        android:hint="@string/city"
+                        android:inputType="text"
+                        android:textColorHint="@color/viewBackground"
+                        fontPath="fonts/BCN_Medium.otf"
+                        tools:ignore="MissingPrefix"
+                        android:padding="4dp"
+                        android:textSize="16sp" />
+
+                    <Spinner
+                        android:id="@+id/order_delivery_city_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/order_delivery_city_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="6dp"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/city"
+                        android:inputType="text"
+                        android:padding="4dp"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+                </FrameLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/text_background"
+                android:layoutDirection="rtl"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_margin="1dp"
+                    android:background="@color/colorPrimary"
+                    android:padding="4dp"
+                    android:src="@drawable/ic_map_location" />
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/order_delivery_location_txt_"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="6dp"
+                        android:background="@android:color/transparent"
+                        android:gravity="center_vertical"
+                        android:hint="@string/location"
+                        android:inputType="text"
+                        android:padding="4dp"
+                        android:textColorHint="@color/viewBackground"
+                        fontPath="fonts/BCN_Medium.otf"
+                        tools:ignore="MissingPrefix"
+                        android:textSize="16sp" />
+
+                    <Spinner
+                        android:id="@+id/order_delivery_location_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/order_delivery_location_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="6dp"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/location"
+                        android:inputType="text"
+                        android:padding="4dp"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/text_background"
+                android:layoutDirection="rtl"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_margin="1dp"
+                    android:background="@color/colorPrimary"
+                    android:padding="4dp"
+                    android:src="@drawable/ic_pie_chart" />
+
+
+                <EditText
+                    android:id="@+id/order_delivery_street_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/street_address"
+                    android:inputType="text"
+                    fontPath="fonts/BCN_Medium.otf"
+                    tools:ignore="MissingPrefix"
+                    android:textColorHint="@color/viewBackground"
+                    android:padding="4dp"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:text="@string/aditional_info"
+                android:textColor="#ff555555"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/text_background"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:gravity="start|top"
+                    android:hint="@string/notes_order_delivery"
+                    android:inputType="textMultiLine"
+                    android:lines="8"
+                    android:maxLines="10"
+                    fontPath="fonts/BCN_Medium.otf"
+                    android:textColorHint="@color/viewBackground"
+                    tools:ignore="MissingPrefix"
+                    android:minLines="4"
+                    android:padding="6dp"
+                    android:scrollbars="vertical"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/confirm_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="15dp"
+                android:elevation="@dimen/_6sdp"
+                app:cardCornerRadius="@dimen/_6sdp"
+                app:cardElevation="@dimen/_4sdp"
+                app:cardBackgroundColor="@color/colorPrimary"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/confirm"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/_6sdp"
+                    android:textStyle="bold"/>
+
+            </android.support.v7.widget.CardView>
+
+
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

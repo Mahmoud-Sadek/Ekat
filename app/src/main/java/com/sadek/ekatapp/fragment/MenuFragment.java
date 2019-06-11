@@ -77,6 +77,12 @@ public class MenuFragment extends Fragment {
         getActivity().onBackPressed();
     }
 
+    //menu_close_btn
+    @OnClick(R.id.menu_close_btn)
+    void menu_close_btn(View view) {
+        getActivity().onBackPressed();
+    }
+
     //menu_add_advertisement_btn
     @OnClick(R.id.menu_add_advertisement_btn)
     void menu_add_advertisement_btn(View view) {
@@ -94,6 +100,11 @@ public class MenuFragment extends Fragment {
     @OnClick(R.id.menu_logout_btn)
     void menu_logout_btn(View view) {
         ((MainActivity) getContext()).switchToPage(4, null, R.string.app_name);
+    }
+    //menu_cart_btn
+    @OnClick(R.id.menu_cart_btn)
+    void menu_cart_btn(View view) {
+        ((MainActivity) getContext()).switchToPage(16, null, R.string.app_name);
     }
 
 

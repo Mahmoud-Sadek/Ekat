@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="150dp"
-    android:layout_height="140dp"
+    android:layout_height="120dp"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_marginLeft="8dp"
     android:layout_marginTop="4dp"
     android:layout_marginRight="8dp"
@@ -10,17 +11,19 @@
     <TextView
         android:id="@+id/main_category_txt"
         android:layout_width="150dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="98dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="80dp"
         android:background="@drawable/background_main_category"
         android:padding="4dp"
+        fontPath="fonts/GE_SS_Two_Light.otf"
+        tools:ignore="MissingPrefix"
         android:gravity="center"
         android:textSize="14sp" />
 
     <ImageView
         android:id="@+id/main_category_image"
         android:layout_width="match_parent"
-        android:layout_height="105dp"
+        android:layout_height="90dp"
         android:background="@android:color/white"
         android:scaleType="fitXY"
         android:src="@drawable/logo" />

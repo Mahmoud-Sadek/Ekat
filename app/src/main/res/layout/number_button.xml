@@ -29,7 +29,7 @@
         android:inputType="number"
         android:padding="8dp"
         android:text="1"
-        fontPath="fonts/VertigoFLF.ttf"
+        fontPath="fonts/BCN_Medium.otf"
         tools:ignore="MissingPrefix"
         android:textStyle="bold"
         android:gravity="center"

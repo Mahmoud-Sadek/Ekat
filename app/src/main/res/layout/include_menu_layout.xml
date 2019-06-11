@@ -2,10 +2,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/backgroundScreens"
     android:orientation="vertical">
 
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/_8sdp"
+        android:background="@color/barBackground"
+        android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -29,11 +36,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="ekcat@gmail.com"
+                fontPath="fonts/GE_SS_Two_Light.otf"
+                tools:ignore="MissingPrefix"
                 android:textSize="11sp" />
         </LinearLayout>
 
         <ImageView
-            android:id="@+id/backIV"
+            android:id="@+id/menu_close_btn"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
@@ -41,8 +50,7 @@
             android:src="@drawable/ic_close_black" />
     </LinearLayout>
 
-
-    <FrameLayout
+        <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/barBackground">
@@ -64,8 +72,8 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="@dimen/_25sdp"
-                    android:layout_height="@dimen/_25sdp"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
                     android:src="@drawable/ic_home"
                     android:tint="@color/colorPrimaryDark" />
 
@@ -75,8 +83,8 @@
                     android:layout_gravity="center"
                     android:padding="2dp"
                     android:text="@string/home"
-                    android:textColor="@color/textBlackColor"
-                    android:textSize="13sp" />
+                    android:textColor="@color/textGrayColor"
+                    android:textSize="9sp" />
 
             </LinearLayout>
 
@@ -91,8 +99,8 @@
                 android:paddingRight="6dp">
 
                 <ImageView
-                    android:layout_width="@dimen/_25sdp"
-                    android:layout_height="@dimen/_25sdp"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
                     android:src="@drawable/ic_user"
                     android:tint="@color/colorPrimaryDark" />
 
@@ -102,21 +110,21 @@
                     android:layout_gravity="center"
                     android:padding="2dp"
                     android:text="@string/profile"
-                    android:textColor="@color/textBlackColor"
-                    android:textSize="13sp" />
+                    android:textColor="@color/textGrayColor"
+                    android:textSize="9sp" />
 
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/favoritesBtn"
+                android:id="@+id/menu_cart_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="@dimen/_25sdp"
-                    android:layout_height="@dimen/_25sdp"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
                     android:src="@drawable/ic_shopping_cart_black_24dp"
                     android:tint="@color/colorPrimaryDark" />
 
@@ -126,20 +134,16 @@
                     android:layout_gravity="center"
                     android:padding="2dp"
                     android:text="@string/cart"
-                    android:textColor="@color/textBlackColor"
-                    android:textSize="13sp" />
+                    android:textColor="@color/textGrayColor"
+                    android:textSize="9sp" />
 
             </LinearLayout>
         </LinearLayout>
 
         <include layout="@layout/include_sign_in" />
     </FrameLayout>
+    </LinearLayout>
 
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/viewBackground" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -175,22 +179,27 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:padding="6dp"
+                        android:textColor="@color/textBlackColor"
+                        android:padding="10dp"
+                        fontPath="fonts/GE_SS_Two_Light.otf"
+                        tools:ignore="MissingPrefix"
                         android:text="@string/animal_wanted"
                         android:textSize="14sp" />
 
                     <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="match_parent"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_gravity="center"
                         android:src="@drawable/ic_chevron_left_black_24dp"
                         android:tint="@color/textBlackColor" />
                 </LinearLayout>
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
+                    android:layout_height="0.3dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginTop="4dp"
                     android:background="@color/viewBackground" />
 
                 <android.support.v7.widget.RecyclerView
@@ -211,22 +220,27 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:padding="6dp"
                         android:text="@string/our_service"
+                        android:padding="10dp"
+                        fontPath="fonts/GE_SS_Two_Light.otf"
+                        tools:ignore="MissingPrefix"
+                        android:textColor="@color/textBlackColor"
                         android:textSize="14sp" />
 
                     <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="match_parent"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_gravity="center"
                         android:src="@drawable/ic_chevron_left_black_24dp"
                         android:tint="@color/textBlackColor" />
                 </LinearLayout>
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
+                    android:layout_height="0.3dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
                     android:background="@color/viewBackground" />
 
                 <LinearLayout
@@ -242,22 +256,27 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:padding="6dp"
+                        android:padding="10dp"
+                        fontPath="fonts/GE_SS_Two_Light.otf"
+                        tools:ignore="MissingPrefix"
+                        android:textColor="@color/textBlackColor"
                         android:text="@string/help"
                         android:textSize="14sp" />
 
                     <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="match_parent"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_gravity="center"
                         android:src="@drawable/ic_chevron_left_black_24dp"
                         android:tint="@color/textBlackColor" />
                 </LinearLayout>
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
+                    android:layout_height="0.3dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginTop="4dp"
                     android:background="@color/viewBackground" />
 
                 <LinearLayout
@@ -274,7 +293,10 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:padding="6dp"
+                        android:padding="10dp"
+                        fontPath="fonts/GE_SS_Two_Light.otf"
+                        tools:ignore="MissingPrefix"
+                        android:textColor="@color/textBlackColor"
                         android:text="@string/logout"
                         android:textSize="14sp" />
 
@@ -287,6 +309,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/_4sdp"
                 android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="16dp"
                 android:layout_marginRight="@dimen/_4sdp"
                 android:background="@drawable/background_list"
                 android:orientation="vertical">
@@ -312,13 +335,17 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:padding="6dp"
+                        fontPath="fonts/GE_SS_Two_Light.otf"
+                        tools:ignore="MissingPrefix"
+                        android:padding="10dp"
+                        android:textColor="@color/textBlackColor"
                         android:text="@string/arabic"
                         android:textSize="14sp" />
 
                     <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="match_parent"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_gravity="center"
                         android:src="@drawable/ic_chevron_left_black_24dp"
                         android:tint="@color/textBlackColor" />
                 </LinearLayout>
@@ -349,13 +376,17 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:padding="6dp"
+                        android:padding="10dp"
+                        fontPath="fonts/GE_SS_Two_Light.otf"
+                        tools:ignore="MissingPrefix"
+                        android:textColor="@color/textBlackColor"
                         android:text="@string/country"
                         android:textSize="14sp" />
 
                     <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="match_parent"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_gravity="center"
                         android:src="@drawable/ic_chevron_left_black_24dp"
                         android:tint="@color/textBlackColor" />
                 </LinearLayout>
@@ -369,7 +400,8 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
                     android:layout_marginLeft="6dp"
                     android:layout_marginRight="6dp"
                     android:orientation="horizontal">
@@ -377,18 +409,24 @@
                     <Button
                         android:id="@+id/menu_add_advertisement_btn"
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
+                        android:layout_height="40dp"
                         android:layout_margin="6dp"
                         android:layout_weight="1"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:elevation="0dp"
+                        android:layout_gravity="center"
                         android:background="#ff5ec16a"
                         android:text="@string/add_ads_free"
                         android:textColor="@android:color/white" />
 
                     <Button
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
+                        android:layout_height="40dp"
                         android:layout_margin="6dp"
                         android:layout_weight="1"
+                        android:elevation="0dp"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_gravity="center"
                         android:background="#fff77d0e"
                         android:text="@string/animal_garden_service"
                         android:textColor="@android:color/white" />

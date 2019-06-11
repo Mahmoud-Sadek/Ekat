@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:fitsSystemWindows="true">
 
     <include
@@ -26,7 +27,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="33dp"
+                android:layout_height="35dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="15dp"
@@ -35,28 +36,32 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="33dp"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
                     android:layout_margin="1dp"
                     android:background="@color/colorPrimary"
-                    android:padding="2dp"
-                    android:src="@drawable/ic_mail_outline_black_24dp" />
+                    android:padding="4dp"
+                    android:src="@drawable/ic_email" />
 
                 <EditText
                     android:id="@+id/login_email_txt"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:layout_marginStart="6dp"
                     android:layout_weight="1"
-                    android:textSize="16sp"
-                    android:inputType="textEmailAddress"
+                    fontPath="fonts/BCN_Medium.otf"
+                    tools:ignore="MissingPrefix"
                     android:background="@android:color/transparent"
                     android:hint="@string/email"
-                    android:padding="4dp" />
+                    android:textColorHint="@color/viewBackground"
+                    android:inputType="textEmailAddress"
+                    android:padding="4dp"
+                    android:textSize="14sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="33dp"
+                android:layout_height="35dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="15dp"
@@ -65,25 +70,29 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="33dp"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
                     android:layout_margin="1dp"
                     android:background="@color/colorPrimary"
-                    android:padding="2dp"
                     android:inputType="textEmailAddress"
+                    android:padding="4dp"
                     android:src="@drawable/ic_lock" />
 
                 <EditText
                     android:id="@+id/login_password_txt"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:layout_marginStart="6dp"
                     android:layout_weight="1"
-                    android:inputType="textPassword"
-                    android:textSize="16sp"
-                    android:textAlignment="viewStart"
                     android:background="@android:color/transparent"
                     android:hint="@string/password"
-                    android:padding="4dp" />
+                    android:inputType="textPassword"
+                    fontPath="fonts/BCN_Medium.otf"
+                    tools:ignore="MissingPrefix"
+                    android:textColorHint="@color/viewBackground"
+                    android:padding="4dp"
+                    android:textAlignment="viewStart"
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <TextView
@@ -92,26 +101,38 @@
                 android:layout_height="wrap_content"
                 android:padding="8dp"
                 android:layout_marginLeft="25dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginRight="25dp"
-                android:textStyle="bold"
+                fontPath="fonts/GE_SS_Two_Light.otf"
+                tools:ignore="MissingPrefix"
                 android:textSize="15sp"
                 android:text="@string/forget_password"/>
 
 
 
-            <Button
+            <android.support.v7.widget.CardView
                 android:id="@+id/login_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="35dp"
                 android:layout_marginRight="15dp"
-                android:background="@drawable/bottun_primary"
-                android:text="@string/login"
-                android:textColor="@android:color/white"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:elevation="@dimen/_6sdp"
+                app:cardCornerRadius="@dimen/_6sdp"
+                app:cardElevation="@dimen/_4sdp"
+                app:cardBackgroundColor="@color/colorPrimary"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/_6sdp"
+                    android:textStyle="bold"/>
+
+            </android.support.v7.widget.CardView>
 
             <TextView
                 android:id="@+id/register_btn"

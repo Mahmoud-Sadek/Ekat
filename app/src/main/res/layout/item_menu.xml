@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical">
 
     <LinearLayout
@@ -17,21 +18,26 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
-            android:padding="6dp"
-            android:textSize="18sp" />
+            android:padding="10dp"
+            fontPath="fonts/GE_SS_Two_Light.otf"
+            tools:ignore="MissingPrefix"
+            android:textColor="@color/textBlackColor"
+            android:textSize="14sp" />
 
         <ImageView
-            android:layout_width="30dp"
-            android:layout_height="match_parent"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_gravity="center"
             android:src="@drawable/ic_chevron_left_black_24dp"
             android:tint="@color/textBlackColor" />
     </LinearLayout>
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
         android:background="@color/viewBackground" />
 
 </LinearLayout>

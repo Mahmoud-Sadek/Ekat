@@ -1,13 +1,30 @@
 package com.sadek.ekatapp.model;
 
-public class CartModel {
+import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
+
+public class CartModel extends RealmObject {
+//    @PrimaryKey
+    private int id;
     String  image, name, quantity, price;
 
-    public CartModel(String image, String name, String quantity, String price) {
+    public CartModel() {
+    }
+
+    public CartModel(int id, String image, String name, String quantity, String price) {
+        this.id = id;
         this.image = image;
         this.name = name;
         this.quantity = quantity;
         this.price = price;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getImage() {

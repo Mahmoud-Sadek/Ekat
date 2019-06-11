@@ -17,6 +17,7 @@ import com.sadek.ekatapp.activity.MainActivity;
 import com.sadek.ekatapp.adapter.HomeProductAdapter;
 import com.sadek.ekatapp.adapter.OptionAdapter;
 import com.sadek.ekatapp.adapter.SliderAdapter;
+import com.sadek.ekatapp.model.CartModel;
 import com.sadek.ekatapp.model.OptionModel;
 import com.sadek.ekatapp.model.ProductModel;
 import com.sadek.ekatapp.model.SliderModel;
@@ -30,6 +31,9 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
+import cn.refactor.lib.colordialog.PromptDialog;
+import io.realm.Realm;
+import io.realm.RealmResults;
 
 
 public class ProductDetailsFragment extends Fragment {
@@ -71,12 +75,12 @@ public class ProductDetailsFragment extends Fragment {
     @BindView(R.id.product_detail_old_price)
     TextView product_detail_old_price;
 
-
+    @BindView(R.id.cart_number)
+    TextView cart_number;
 
 
     HomeProductAdapter homeProductAdapter;
     List<ProductModel> productModelList;
-
 
 
     SliderAdapter sliderAdapter;
@@ -91,6 +95,7 @@ public class ProductDetailsFragment extends Fragment {
     OptionAdapter rulerOptionAdapter;
     List<OptionModel> rulerOptionModelList;
 
+    Realm realm;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -101,6 +106,8 @@ public class ProductDetailsFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         unbinder = ButterKnife.bind(this, view);
+
+        realm = Realm.getDefaultInstance();
         initUI();
     }
 
@@ -135,21 +142,21 @@ public class ProductDetailsFragment extends Fragment {
         //product_detail_color_recycler
         final RecyclerView.LayoutManager mLayoutManager_detail_color = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
         product_detail_color_recycler.setLayoutManager(mLayoutManager_detail_color);
-        colorOptionAdapter = new OptionAdapter(colorOptionModelList, getContext(),0);
+        colorOptionAdapter = new OptionAdapter(colorOptionModelList, getContext(), 0);
         product_detail_color_recycler.setAdapter(colorOptionAdapter);
 
 
         //product_detail_size_recycler
         final RecyclerView.LayoutManager mLayoutManager_detail_size = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
         product_detail_size_recycler.setLayoutManager(mLayoutManager_detail_size);
-        sizeOptionAdapter = new OptionAdapter(sizeOptionModelList, getContext(),1);
+        sizeOptionAdapter = new OptionAdapter(sizeOptionModelList, getContext(), 1);
         product_detail_size_recycler.setAdapter(sizeOptionAdapter);
 
 
         //product_detail_ruler_recycler
         final RecyclerView.LayoutManager mLayoutManager_detail_ruler = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
         product_detail_ruler_recycler.setLayoutManager(mLayoutManager_detail_ruler);
-        rulerOptionAdapter = new OptionAdapter(rulerOptionModelList, getContext(),2);
+        rulerOptionAdapter = new OptionAdapter(rulerOptionModelList, getContext(), 2);
         product_detail_ruler_recycler.setAdapter(rulerOptionAdapter);
 
 
@@ -184,8 +191,6 @@ public class ProductDetailsFragment extends Fragment {
         rulerOptionModelList.add(new OptionModel("#5e0091ff", "140"));
 
 
-
-
         productModelList.add(new ProductModel("https://www.ekat.ae/wp-content/uploads/2018/12/happy-cats.jpg", "كلاب", "120 ر.ا", "وصل حديثاَ"));
         productModelList.add(new ProductModel("https://www.ekat.ae/wp-content/uploads/2019/01/Untitled-3-247x296.jpg", "كلاب", "120 ر.ا", "وصل حديثاَ"));
         productModelList.add(new ProductModel("https://www.ekat.ae/wp-content/uploads/2018/12/happy-cats.jpg", "كلاب", "120 ر.ا", "وصل حديثاَ"));
@@ -193,17 +198,24 @@ public class ProductDetailsFragment extends Fragment {
 
 
         product_detail_video_video.setVideoPath("http://videocdn.bodybuilding.com/video/mp4/62000/62792m.mp4");
-    }
 
+        if (cartNumber() == 0) {
+            cart_number.setVisibility(View.GONE);
+        } else {
+            cart_number.setVisibility(View.VISIBLE);
+            cart_number.setText(cartNumber() + "");
+        }
+
+    }
 
 
     @OnClick(R.id.product_detail_more_plus)
     void product_detail_more_plus(View view) {
-        if (product_detail_more_details_txt.getVisibility() == View.VISIBLE){
+        if (product_detail_more_details_txt.getVisibility() == View.VISIBLE) {
             product_detail_more_details_txt.setVisibility(View.GONE);
             product_detail_more_plus.setText("+");
 
-        }else {
+        } else {
             product_detail_more_details_txt.setVisibility(View.VISIBLE);
             product_detail_more_plus.setText("-");
         }
@@ -211,11 +223,11 @@ public class ProductDetailsFragment extends Fragment {
 
     @OnClick(R.id.product_detail_video_plus)
     void product_detail_video_plus(View view) {
-        if (product_detail_video_video.getVisibility() == View.VISIBLE){
+        if (product_detail_video_video.getVisibility() == View.VISIBLE) {
             product_detail_video_video.setVisibility(View.GONE);
             product_detail_video_plus.setText("+");
             product_detail_video_video.pause();
-        }else {
+        } else {
             product_detail_video_video.setVisibility(View.VISIBLE);
             product_detail_video_plus.setText("-");
             product_detail_video_video.start();
@@ -227,10 +239,11 @@ public class ProductDetailsFragment extends Fragment {
     void app_bar_back_btn(View view) {
         getActivity().onBackPressed();
     }
+
     //app_bar_notification_btn
     @OnClick(R.id.app_bar_notification_btn)
     void app_bar_notification_btn(View view) {
-        ((MainActivity)getContext()).switchToPage(15, null, R.string.app_name);
+        ((MainActivity) getContext()).switchToPage(16, null, R.string.app_name);
     }
     //number button
 
@@ -240,6 +253,7 @@ public class ProductDetailsFragment extends Fragment {
         number_button_value_txt.setText(currentNumber + "");
     }
 
+
     @OnClick(R.id.number_button_minus_btn)
     void number_button_minus_btn(View view) {
         int currentNumber = Integer.parseInt(number_button_value_txt.getText().toString()) - 1;
@@ -247,4 +261,34 @@ public class ProductDetailsFragment extends Fragment {
             number_button_value_txt.setText(currentNumber + "");
     }
 
+    @OnClick(R.id.product_detail_add_to_cart)
+    void product_detail_add_to_cart(View view) {
+        addRecord();
+    }
+
+    @OnClick(R.id.product_detail_go_to_cart)
+    void product_detail_go_to_cart(View view) {
+        ((MainActivity) getContext()).switchToPage(16, null, R.string.app_name);
+    }
+
+    public void addRecord() {
+        realm.beginTransaction();
+
+        CartModel cartModel = realm.createObject(CartModel.class);
+        cartModel.setId(cartNumber());
+        cartModel.setName("الاسم");
+        cartModel.setPrice("122");
+        cartModel.setQuantity(number_button_value_txt.getText().toString());
+        cartModel.setImage("https://www.ekat.ae/wp-content/uploads/2018/12/happy-cats.jpg");
+        realm.commitTransaction();
+        cart_number.setVisibility(View.VISIBLE);
+        cart_number.setText(cartNumber() + "");
+        Common.showErrorDialog2(getActivity(),PromptDialog.DIALOG_TYPE_SUCCESS, R.string.empty, R.string.success_add_to_cart);
+
+    }
+
+    public int cartNumber() {
+        RealmResults<CartModel> results = realm.where(CartModel.class).findAll();
+        return ((RealmResults) results).size();
+    }
 }

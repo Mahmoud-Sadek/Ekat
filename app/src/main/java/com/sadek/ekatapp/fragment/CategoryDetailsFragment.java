@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.sadek.ekatapp.R;
 import com.sadek.ekatapp.activity.MainActivity;
@@ -17,6 +18,7 @@ import com.sadek.ekatapp.adapter.FilterAdapter;
 import com.sadek.ekatapp.adapter.HomeProductAdapter;
 import com.sadek.ekatapp.adapter.ProductAdapter;
 import com.sadek.ekatapp.adapter.SliderAdapter;
+import com.sadek.ekatapp.model.CartModel;
 import com.sadek.ekatapp.model.FilterModel;
 import com.sadek.ekatapp.model.ProductModel;
 import com.sadek.ekatapp.model.SliderModel;
@@ -30,6 +32,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
+import io.realm.Realm;
+import io.realm.RealmResults;
 
 
 public class CategoryDetailsFragment extends Fragment {
@@ -51,6 +55,14 @@ public class CategoryDetailsFragment extends Fragment {
     @BindView(R.id.category_detail_filter_recycler)
     RecyclerView category_detail_filter_recycler;
 
+
+    @BindView(R.id.tabTxt)
+    TextView tabTxt;
+
+    @BindView(R.id.cart_number)
+    TextView cart_number;
+
+
     ProductAdapter productAdapter;
     List<ProductModel> productModelList;
 
@@ -61,6 +73,10 @@ public class CategoryDetailsFragment extends Fragment {
     SliderAdapter sliderAdapter;
     List<SliderModel> sliderModelList;
 
+    Realm realm;
+
+    FilterDialogFragment filterDialogFragment;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_category_details, container, false);
@@ -70,11 +86,14 @@ public class CategoryDetailsFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         unbinder = ButterKnife.bind(this, view);
+        realm = Realm.getDefaultInstance();
         initUI();
     }
 
 
     private void initUI() {
+        tabTxt.setText("كلاب");
+
         app_bar_share_btn.setVisibility(View.GONE);
 
         sliderModelList = new ArrayList<>();
@@ -137,12 +156,27 @@ public class CategoryDetailsFragment extends Fragment {
         filterModelList.add(new FilterModel("كلاب"));
         filterModelList.add(new FilterModel("كلاب"));
 
+        if (cartNumber() == 0) {
+            cart_number.setVisibility(View.GONE);
+        } else {
+            cart_number.setVisibility(View.VISIBLE);
+            cart_number.setText(cartNumber() + "");
+        }
+
     }
 
 
     @OnClick(R.id.category_detail_filter_txt)
     void category_detail_filter_txt(View view) {
+        filterDialogFragment = FilterDialogFragment.newInstance(new FilterDialogFragment.FilterAction() {
+            @Override
+            public void onGetFilterCode(String code) {
+                filterDialogFragment.dismiss();
 
+            }
+        });
+        filterDialogFragment.show(getChildFragmentManager(),
+                "filter_dialog_fragment");
     }
     //app_bar_back_btn
     @OnClick(R.id.app_bar_back_btn)
@@ -152,7 +186,11 @@ public class CategoryDetailsFragment extends Fragment {
     //app_bar_notification_btn
     @OnClick(R.id.app_bar_notification_btn)
     void app_bar_notification_btn(View view) {
-        ((MainActivity)getContext()).switchToPage(15, null, R.string.app_name);
+        ((MainActivity)getContext()).switchToPage(16, null, R.string.app_name);
     }
 
+    public int cartNumber() {
+        RealmResults<CartModel> results = realm.where(CartModel.class).findAll();
+        return ((RealmResults) results).size();
+    }
 }

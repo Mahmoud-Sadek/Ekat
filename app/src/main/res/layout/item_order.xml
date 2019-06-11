@@ -4,10 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_margin="4dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="6dp"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp"
     android:orientation="vertical"
     app:cardCornerRadius="4dp"
-    app:cardElevation="1dp">
+    app:cardElevation="4dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -42,6 +45,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="طلب"
+                    fontPath="fonts/GE_SS_Two_Light.otf"
+                    tools:ignore="MissingPrefix"
                     android:textColor="@color/textprimaryColor"
                     android:textSize="@dimen/_12sdp" />
                 <TextView
@@ -49,7 +54,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="#219023804"
-                    fontPath="fonts/VertigoFLF.ttf"
+                    fontPath="fonts/BCN_Medium.otf"
                     tools:ignore="MissingPrefix"
                     android:textColor="@color/textGrayColor"
                     android:layout_marginLeft="4dp"
@@ -71,7 +76,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="05-02-2019"
-            fontPath="fonts/VertigoFLF.ttf"
+            fontPath="fonts/BCN_Medium.otf"
             tools:ignore="MissingPrefix"
             android:textColor="@color/textGrayColor"
             android:layout_gravity="center"

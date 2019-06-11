@@ -1,5 +1,6 @@
 package com.sadek.ekatapp.fragment;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -8,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.rilixtech.CountryCodePicker;
 import com.sadek.ekatapp.R;
 import com.sadek.ekatapp.adapter.OrderAdapter;
 import com.sadek.ekatapp.model.OrderModel;
@@ -24,7 +26,8 @@ import butterknife.Unbinder;
 public class MyInfoFragment extends Fragment {
 
     Unbinder unbinder;
-
+    @BindView(R.id.ccp)
+    CountryCodePicker ccp;
 
 
     @Override
@@ -42,6 +45,9 @@ public class MyInfoFragment extends Fragment {
     private void initUI() {
 
 
+
+        Typeface typeFace=Typeface.createFromAsset(getContext().getAssets(),"fonts/BCN_Medium.otf");
+        ccp.setTypeFace(typeFace);
        }
 
 

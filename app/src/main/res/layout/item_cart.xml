@@ -57,7 +57,7 @@
 
         <include
             layout="@layout/number_button_cart"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/_70sdp"
             android:layout_height="30dp"
             android:layout_gravity="center"/>
 
@@ -68,7 +68,7 @@
             android:layout_weight="1"
             android:layout_gravity="center"
             android:text="250 A.E.D"
-            fontPath="fonts/VertigoFLF.ttf"
+            fontPath="fonts/BCN_Medium.otf"
             tools:ignore="MissingPrefix"
             android:textColor="@color/textGrayColor"
             android:textSize="12sp" />

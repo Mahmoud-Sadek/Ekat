@@ -33,6 +33,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
+import cn.refactor.lib.colordialog.PromptDialog;
 
 
 public class LoginFragment extends Fragment {
@@ -85,13 +86,15 @@ public class LoginFragment extends Fragment {
     private Boolean validate() {
         login_password_txt.setError(null);
         login_email_txt.setError(null);
-        String email = login_password_txt.getText().toString();
+        String email = login_email_txt.getText().toString();
         String pass = login_password_txt.getText().toString();
         if (email.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             login_email_txt.setError(getString(R.string.enter_valid_email));
+            Common.showErrorDialog2(getActivity(),PromptDialog.DIALOG_TYPE_WRONG, R.string.error, R.string.enter_valid_email);
             return false;
         } else if (pass.isEmpty() || pass.length() < 6) {
             login_password_txt.setError(getString(R.string.enter_valid_password));
+            Common.showErrorDialog(getActivity(), R.string.error, R.string.enter_valid_password);
             return false;
         }
         return true;
