@@ -130,6 +130,7 @@
     <string name="pay_by_bank_description">قم بإجراء حوالة مباشرة لأحد حساباتنا المصرفية.(لن يتم شحن طلبك حتى يتم التأكد من عملية الدفع)</string>
     <string name="sucess">تم بنجاح</string>
     <string name="your_acount_susessfly_created">تم انشاء حسابك بنجاح</string>
+    <string name="your_acount_susessfly_Logedin">تم تسجيل دخولك بنجاح</string>
 
     <string-array name="filter_array">
         <item>الاحدث</item>

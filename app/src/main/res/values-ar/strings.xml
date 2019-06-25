@@ -126,4 +126,5 @@
     <string name="pay_by_visa_description">ادفع بامان باستخدام بطاقتك الإئتمانية</string>
     <string name="sucess">تم بنجاح</string>
     <string name="your_acount_susessfly_created">تم انشاء حسابك بنجاح</string>
+    <string name="your_acount_susessfly_Logedin">تم تسجيل دخولك بنجاح</string>
 </resources>

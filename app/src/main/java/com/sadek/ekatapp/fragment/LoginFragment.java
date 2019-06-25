@@ -2,41 +2,31 @@ package com.sadek.ekatapp.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.PagerSnapHelper;
-import android.support.v7.widget.RecyclerView;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.widget.Toast;
 
+import com.kaopiz.kprogresshud.KProgressHUD;
 import com.sadek.ekatapp.R;
 import com.sadek.ekatapp.activity.MainActivity;
-import com.sadek.ekatapp.adapter.HomeProductAdapter;
-import com.sadek.ekatapp.adapter.MainCategoryAdapter;
-import com.sadek.ekatapp.adapter.OfferAdapter;
-import com.sadek.ekatapp.adapter.SliderAdapter;
-import com.sadek.ekatapp.adapter.SubCategoryAdapter;
-import com.sadek.ekatapp.model.MainCategoriesModel;
-import com.sadek.ekatapp.model.ProductModel;
-import com.sadek.ekatapp.model.SliderModel;
+import com.sadek.ekatapp.interfaces.LoginInterface;
+import com.sadek.ekatapp.model.body.LoginBody;
+import com.sadek.ekatapp.model.response.LoginResponse;
+import com.sadek.ekatapp.presentsers.LoginPresenter;
 import com.sadek.ekatapp.utils.Common;
-import com.sadek.ekatapp.view.CircleIndicator2;
-import com.squareup.picasso.Picasso;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
 import cn.refactor.lib.colordialog.PromptDialog;
+import io.paperdb.Paper;
 
 
-public class LoginFragment extends Fragment {
+public class LoginFragment extends Fragment implements LoginInterface {
 
     Unbinder unbinder;
     @BindView(R.id.login_email_txt)
@@ -44,6 +34,9 @@ public class LoginFragment extends Fragment {
     @BindView(R.id.login_password_txt)
     EditText login_password_txt;
 
+    LoginBody request;
+
+    public static KProgressHUD dialog = null;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -73,7 +66,7 @@ public class LoginFragment extends Fragment {
     void login_btn(View view) {
         if (!validate())
             return;
-        getActivity().onBackPressed();
+        LoginPresenter.sendLogin(getContext(), request, this);
     }
 
     //register_btn
@@ -104,7 +97,40 @@ public class LoginFragment extends Fragment {
             Common.showErrorDialog(getActivity(), R.string.error, R.string.enter_valid_password);
             return false;
         }
+        request = new LoginBody();
+        request.setPassword(pass);
+        request.setUsername(email);
         return true;
+
+    }
+
+
+    @Override
+    public void showProgress(boolean show) {
+        if (show) {
+            dialog.show();
+        } else {
+            dialog.dismiss();
+        }
+    }
+
+    @Override
+    public void onErorr(String response) {
+
+        Toast.makeText(getContext(), response, Toast.LENGTH_SHORT).show();
+
+    }
+
+
+    @Override
+    public void onSuccess(LoginResponse response) {
+
+
+        Paper.book().write(Common.userID, response.getToken());
+
+        Paper.book().write(Common.userPassword, request.getPassword());
+        getChildFragmentManager().popBackStack("tag", FragmentManager.POP_BACK_STACK_INCLUSIVE);
+        Common.showErrorDialog2(getActivity(), PromptDialog.DIALOG_TYPE_SUCCESS, R.string.sucess, R.string.your_acount_susessfly_Logedin);
 
     }
 }

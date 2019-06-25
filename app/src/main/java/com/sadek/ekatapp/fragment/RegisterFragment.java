@@ -3,6 +3,7 @@ package com.sadek.ekatapp.fragment;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -253,7 +254,7 @@ public class RegisterFragment extends Fragment implements SignupInterface {
         billingEntity.setEmail(email);
         billingEntity.setFirstName(name);
         billingEntity.setLastName(name);
-        billingEntity.setPhone(phone);
+        billingEntity.setPhone("("+ccp.getSelectedCountryCode()+")"+phone);
         billingEntity.setCity(city);
         billingEntity.setCountry(country);
         billingEntity.setState(region);
@@ -282,16 +283,17 @@ public class RegisterFragment extends Fragment implements SignupInterface {
 
     @Override
     public void onErorr(String response) {
-        dialog.dismiss();
+
         Toast.makeText(getContext(), response, Toast.LENGTH_SHORT).show();
 
     }
 
     @Override
     public void onSignupSuccess(SignupResponse response) {
-        dialog.dismiss();
-        Paper.book().write(Common.userID, response.getId());
 
+        Paper.book().write(Common.userID, response.getId());
+        Paper.book().write(Common.userPassword, request.getPassword());
+        getChildFragmentManager().popBackStack("tag", FragmentManager.POP_BACK_STACK_INCLUSIVE);
         Common.showErrorDialog2(getActivity(), PromptDialog.DIALOG_TYPE_SUCCESS, R.string.sucess, R.string.your_acount_susessfly_created);
 
     }

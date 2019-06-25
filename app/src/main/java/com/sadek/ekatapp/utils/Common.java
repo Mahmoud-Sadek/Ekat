@@ -21,7 +21,8 @@ public class Common {
     public static final String ORDER_STATUS_PROGRESS = "1";
     public static final String ORDER_STATUS_CANCELED = "2";
     public static final String Language = "Language";
-    public static String userID = "userID";
+    public static final String userID = "userID";
+    public static final String userPassword ="userPassword";
 
     public static void autoScrollRecycler(final RecyclerView recyclerView, final int dataListSize) {
         final int speedScroll = 4000;
@@ -84,7 +85,8 @@ public class Common {
                     @Override
                     public void onClick(PromptDialog dialog) {
                         if (type == PromptDialog.DIALOG_TYPE_SUCCESS)
-                            ((MainActivity) activity).onBackPressed();
+//                            ((MainActivity) activity).onBackPressed();
+                            ((MainActivity) activity).switchToPage(1, null, R.string.app_name);
                         dialog.dismiss();
                     }
                 });
