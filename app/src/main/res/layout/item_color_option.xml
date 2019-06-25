@@ -2,8 +2,8 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/option_background"
-    android:layout_width="40dp"
-    android:layout_height="40dp"
+    android:layout_width="37dp"
+    android:layout_height="37dp"
     android:layout_margin="4dp">
 
     <TextView
@@ -13,7 +13,7 @@
         android:layout_margin="1dp"
         android:background="@color/colorAccent"
         android:gravity="center"
-        fontPath="fonts/BCN_Medium.otf"
+        fontPath="fonts/Tajawal-Bold.ttf"
         tools:ignore="MissingPrefix"
         android:textColor="@android:color/black"
         android:textStyle="bold" />
@@ -23,6 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="10dp"
-        android:src="@drawable/ic_check_black_24dp"
+        android:tint="@android:color/white"
+        android:src="@drawable/ic_checked"
         android:visibility="gone" />
 </FrameLayout>

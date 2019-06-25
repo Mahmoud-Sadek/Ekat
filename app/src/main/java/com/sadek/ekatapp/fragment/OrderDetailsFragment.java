@@ -39,6 +39,8 @@ public class OrderDetailsFragment extends Fragment {
     @BindView(R.id.order_details_order_items_recycler)
     RecyclerView order_details_order_items_recycler;
 
+    @BindView(R.id.tabTxt)
+    TextView tabTxt;
 
     OrderItemsAdapter orderItemsAdapter;
     List<OrderItemModel> orderItemModels;
@@ -57,7 +59,15 @@ public class OrderDetailsFragment extends Fragment {
     }
 
 
+
+    //app_bar_back_btn
+    @OnClick(R.id.app_bar_back_btn)
+    void app_bar_back_btn(View view) {
+        getActivity().onBackPressed();
+    }
+
     private void initUI() {
+        tabTxt.setText(R.string.order_details);
 
         orderItemModels = new ArrayList<>();
 
@@ -74,9 +84,9 @@ public class OrderDetailsFragment extends Fragment {
 
     private void setSliderData() {
 
-        orderItemModels.add(new OrderItemModel("صقر عربي صحراوي", "1 ×","250 ا.د"));
-        orderItemModels.add(new OrderItemModel("صقر عربي صحراوي", "1 ×","250 ا.د"));
-        orderItemModels.add(new OrderItemModel("صقر عربي صحراوي", "1 ×","250 ا.د"));
+        orderItemModels.add(new OrderItemModel("صقر عربي صحراوي", "× 1 ","250 ا.د"));
+        orderItemModels.add(new OrderItemModel("صقر عربي صحراوي", "× 1 ","250 ا.د"));
+        orderItemModels.add(new OrderItemModel("صقر عربي صحراوي", "× 1 ","250 ا.د"));
 
     }
 

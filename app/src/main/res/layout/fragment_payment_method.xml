@@ -74,7 +74,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="35dp"
+                    android:layout_height="33dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="15dp"
@@ -84,7 +84,7 @@
 
                     <EditText
                         android:id="@+id/confirm_phone_code_txt"
-                        fontPath="fonts/BCN_Medium.otf"
+                        fontPath="fonts/Tajawal-Bold.ttf"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -95,18 +95,28 @@
                         tools:ignore="MissingPrefix" />
                 </LinearLayout>
 
-                <Button
+                <android.support.v7.widget.CardView
                     android:id="@+id/payment_use_voucher_btn"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="34dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="35dp"
                     android:layout_marginRight="15dp"
-                    android:background="@drawable/bottun_primary"
-                    android:text="@string/use_voucher"
-                    android:textColor="@android:color/white"
-                    android:textSize="22sp"
-                    android:textStyle="bold" />
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="2dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="@dimen/_6sdp"
+                        android:text="@string/use_voucher"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </android.support.v7.widget.CardView>
 
 
             </LinearLayout>
@@ -115,6 +125,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
+                android:layout_marginTop="@dimen/_4sdp"
                 android:background="@drawable/background_list"
                 android:orientation="vertical"
                 android:padding="8dp">
@@ -125,24 +136,36 @@
                     android:orientation="horizontal">
 
                     <RadioGroup
+                        android:id="@+id/payment_radio"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:orientation="vertical">
 
                         <RadioButton
+                            android:id="@+id/pay_on_delivery_radio"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
-                            android:layout_weight="1"></RadioButton>
+                            android:layout_gravity="top"
+                            android:layout_weight="4"
+                            android:gravity="top"></RadioButton>
 
                         <RadioButton
+                            android:id="@+id/pay_by_visa_radio"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
-                            android:layout_weight="1"></RadioButton>
+                            android:layout_marginTop="2dp"
+                            android:layout_gravity="top"
+                            android:layout_weight="4"
+                            android:gravity="top"></RadioButton>
 
                         <RadioButton
+                            android:id="@+id/pay_by_bank_radio"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
-                            android:layout_weight="1"></RadioButton>
+                            android:layout_gravity="top"
+                            android:layout_marginTop="-4dp"
+                            android:layout_weight="4"
+                            android:gravity="top"></RadioButton>
                     </RadioGroup>
 
                     <LinearLayout
@@ -154,79 +177,134 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
+                            android:layout_weight="3"
+                            android:layout_marginTop="5dp"
+                            android:orientation="vertical"
+                            android:paddingBottom="0dp">
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/pay_on_delivery"
-                                android:textColor="@color/textGrayColor"
+                                android:textColor="@color/textBlackColor"
                                 android:textSize="12sp" />
 
                             <TextView
+                                android:id="@+id/pay_on_delivery_desc"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:visibility="invisible"
                                 android:text="@string/pay_on_delivery_description"
                                 android:textColor="@color/textGrayColor"
-                                android:textSize="12sp" />
+                                android:textSize="10sp" />
                         </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.3dp"
+                            android:background="@color/viewBackground" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
-                            android:layout_weight="1"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:text="@string/pay_by_visa"
-                                android:textColor="@color/textGrayColor"
-                                android:textSize="12sp" />
-
+                            android:layout_weight="4"
+                            android:orientation="vertical"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="0dp">
 
                             <LinearLayout
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginLeft="@dimen/_25sdp"
-                                android:layout_marginRight="@dimen/_25sdp"
-                                android:gravity="center"
                                 android:orientation="horizontal">
 
-                                <ImageView
-                                    android:layout_width="30dp"
-                                    android:layout_height="30dp"
-                                    android:layout_margin="1dp"
-                                    android:src="@drawable/ic_mastercard" />
-
-                                <ImageView
-                                    android:layout_width="30dp"
-                                    android:layout_height="30dp"
-                                    android:layout_margin="1dp"
-                                    android:src="@drawable/ic_visa" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="@string/pay_by_visa"
+                                    android:textColor="@color/textBlackColor"
+                                    android:textSize="12sp" />
 
 
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="@dimen/_25sdp"
+                                    android:layout_marginRight="@dimen/_25sdp"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginRight="5dp"
+                                        android:src="@drawable/ic_mastercard" />
+
+                                    <ImageView
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginRight="5dp"
+                                        android:src="@drawable/ic_visa" />
+
+
+                                </LinearLayout>
                             </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/pay_by_visa_desc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:lines="2"
+                                android:visibility="invisible"
+                                android:text="@string/pay_by_visa_description"
+                                android:textColor="@color/textGrayColor"
+                                android:textSize="10sp" />
                         </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.3dp"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginRight="0dp"
+                            android:background="@color/viewBackground" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:orientation="vertical">
+                            android:layout_weight="4"
+                            android:orientation="vertical"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="0dp">
+
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/pay_by_bank"
-                                android:textColor="@color/textGrayColor"
+                                android:textColor="@color/textBlackColor"
                                 android:textSize="12sp" />
 
+                            <TextView
+                                android:id="@+id/pay_by_bank_desc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:lines="2"
+                                android:visibility="invisible"
+                                android:text="@string/pay_by_bank_description"
+                                android:textColor="@color/textGrayColor"
+                                android:textSize="10sp" />
                         </LinearLayout>
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.3dp"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginRight="0dp"
+                            android:background="@color/viewBackground" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -239,14 +317,18 @@
 
                     <CheckBox
                         android:id="@+id/register_confirm_checkbox"
+                        fontPath="fonts/GE_SS_Two_Light.otf"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:text="@string/have_read"
                         android:textColor="@android:color/black"
-                        android:textSize="15sp" />
+                        android:textSize="15sp"
+                        android:buttonTint="@color/colorPrimary"
+                        tools:ignore="MissingPrefix" />
 
                     <TextView
                         android:id="@+id/login_privacy_txt"
+                        fontPath="fonts/GE_SS_Two_Light.otf"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="4dp"
@@ -254,7 +336,8 @@
                         android:gravity="center"
                         android:text="@string/privacy_policy"
                         android:textColor="@color/colorPrimary"
-                        android:textSize="15sp" />
+                        android:textSize="15sp"
+                        tools:ignore="MissingPrefix" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -270,16 +353,15 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
                     android:orientation="horizontal"
-                    android:padding="4dp">
+                    android:padding="2dp">
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="start"
+                        android:layout_gravity="start|center"
                         android:layout_weight="1"
-                        android:padding="10dp"
+                        android:padding="5dp"
                         android:text="@string/prices"
                         android:textColor="@color/textGrayColor"
                         android:textSize="9sp"
@@ -304,19 +386,19 @@
                     android:layout_height="1dp"
                     android:background="@color/viewBackground" />
 
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
                     android:orientation="horizontal"
-                    android:padding="4dp">
+                    android:padding="2dp">
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="start"
+                        android:layout_gravity="start|center"
                         android:layout_weight="1"
-                        android:padding="10dp"
+                        android:padding="5dp"
                         android:text="@string/shipping_charges"
                         android:textColor="@color/textGrayColor"
                         android:textSize="9sp"
@@ -341,19 +423,19 @@
                     android:layout_height="1dp"
                     android:background="@color/viewBackground" />
 
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
                     android:orientation="horizontal"
-                    android:padding="4dp">
+                    android:padding="2dp">
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="start"
+                        android:layout_gravity="start|center"
                         android:layout_weight="1"
-                        android:padding="10dp"
+                        android:padding="5dp"
                         android:text="@string/cash_on_delivery"
                         android:textColor="@color/textGrayColor"
                         android:textSize="9sp"
@@ -382,16 +464,15 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
                     android:orientation="horizontal"
-                    android:padding="4dp">
+                    android:padding="2dp">
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="start"
+                        android:layout_gravity="start|center"
                         android:layout_weight="1"
-                        android:padding="10dp"
+                        android:padding="5dp"
                         android:text="@string/total"
                         android:textColor="@color/textGrayColor"
                         android:textSize="9sp"
@@ -415,19 +496,20 @@
 
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_height="38dp"
                 android:layout_marginLeft="30dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginRight="30dp"
                 android:background="#033535"
                 android:text="@string/confirm_order"
                 android:textColor="@android:color/white"
                 android:textSize="20sp" />
+
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_height="38dp"
                 android:layout_marginLeft="30dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginRight="30dp"
                 android:layout_marginBottom="90dp"
                 android:background="#ce3533"

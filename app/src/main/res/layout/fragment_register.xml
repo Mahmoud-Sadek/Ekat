@@ -29,7 +29,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
+                android:layout_height="33dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="15dp"
@@ -38,8 +38,8 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
                     android:layout_margin="1dp"
                     android:background="@color/colorPrimary"
                     android:padding="4dp"
@@ -51,11 +51,12 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="6dp"
                     android:layout_weight="1"
-                    fontPath="fonts/BCN_Medium.otf"
+                    fontPath="fonts/Tajawal-Bold.ttf"
                     tools:ignore="MissingPrefix"
                     android:background="@android:color/transparent"
                     android:hint="@string/name"
                     android:inputType="text"
+                    android:textAlignment="viewStart"
                     android:textColorHint="@color/viewBackground"
                     android:padding="4dp"
                     android:textSize="16sp" />
@@ -64,7 +65,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
+                android:layout_height="33dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="15dp"
@@ -73,8 +74,8 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
                     android:layout_margin="1dp"
                     android:background="@color/colorPrimary"
                     android:inputType="textEmailAddress"
@@ -90,7 +91,7 @@
                     android:background="@android:color/transparent"
                     android:hint="@string/password"
                     android:inputType="textPassword"
-                    fontPath="fonts/BCN_Medium.otf"
+                    fontPath="fonts/Tajawal-Bold.ttf"
                     tools:ignore="MissingPrefix"
                     android:textColorHint="@color/viewBackground"
                     android:padding="4dp"
@@ -108,15 +109,15 @@
 
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_height="35dp"
+                    android:layout_height="33dp"
                     android:layout_weight="1"
                     android:background="@drawable/text_background"
                     android:layoutDirection="rtl"
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
                         android:layout_margin="1dp"
                         android:background="@color/colorPrimary"
                         android:padding="4dp"
@@ -130,7 +131,7 @@
                         android:layout_weight="1"
                         android:background="@android:color/transparent"
                         android:textAlignment="viewStart"
-                        fontPath="fonts/BCN_Medium.otf"
+                        fontPath="fonts/Tajawal-Bold.ttf"
                         tools:ignore="MissingPrefix"
                         android:hint="@string/phone"
                         android:inputType="phone"
@@ -152,7 +153,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
+                android:layout_height="33dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="15dp"
@@ -161,8 +162,8 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
                     android:layout_margin="1dp"
                     android:background="@color/colorPrimary"
                     android:padding="4dp"
@@ -174,10 +175,11 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="6dp"
                     android:layout_weight="1"
-                    fontPath="fonts/BCN_Medium.otf"
+                    fontPath="fonts/Tajawal-Bold.ttf"
                     tools:ignore="MissingPrefix"
                     android:background="@android:color/transparent"
                     android:hint="@string/email"
+                    android:textAlignment="viewStart"
                     android:textColorHint="@color/viewBackground"
                     android:inputType="textEmailAddress"
                     android:padding="4dp"
@@ -186,7 +188,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
+                android:layout_height="33dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="15dp"
@@ -195,8 +197,8 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
                     android:layout_margin="1dp"
                     android:background="@color/colorPrimary"
                     android:padding="4dp"
@@ -212,9 +214,9 @@
                     android:hint="@string/country"
                     android:textColorHint="@color/viewBackground"
                     android:inputType="text"
-                    fontPath="fonts/BCN_Medium.otf"
-                    tools:ignore="MissingPrefix"
                     android:padding="4dp"
+                    android:visibility="gone"
+                    android:textAlignment="viewStart"
                     android:textSize="16sp" />
                 <FrameLayout
                     android:layout_width="0dp"
@@ -226,7 +228,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:textSize="16sp"
-                        android:visibility="gone"
                         />
                 </FrameLayout>
 
@@ -234,7 +235,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
+                android:layout_height="33dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="15dp"
@@ -243,8 +244,8 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
                     android:layout_margin="1dp"
                     android:background="@color/colorPrimary"
                     android:padding="4dp"
@@ -274,8 +275,7 @@
                         android:id="@+id/register_city_spinner"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:textSize="16sp"
-                        android:visibility="gone" />
+                        android:textSize="16sp" />
 
                     <EditText
                         android:id="@+id/register_city_txt"
@@ -284,18 +284,18 @@
                         android:layout_marginStart="6dp"
                         android:background="@android:color/transparent"
                         android:hint="@string/city"
-                        fontPath="fonts/BCN_Medium.otf"
-                        tools:ignore="MissingPrefix"
                         android:textColorHint="@color/viewBackground"
                         android:inputType="text"
                         android:padding="4dp"
+                        android:visibility="gone"
+                        android:textAlignment="viewStart"
                         android:textSize="16sp" />
                 </FrameLayout>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
+                android:layout_height="33dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="15dp"
@@ -304,8 +304,8 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
                     android:layout_margin="1dp"
                     android:background="@color/colorPrimary"
                     android:padding="4dp"
@@ -334,8 +334,7 @@
                         android:id="@+id/register_location_spinner"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:textSize="16sp"
-                        android:visibility="gone" />
+                        android:textSize="16sp" />
 
                     <EditText
                         android:id="@+id/register_location_txt"
@@ -345,10 +344,10 @@
                         android:background="@android:color/transparent"
                         android:hint="@string/location"
                         android:inputType="text"
-                        fontPath="fonts/BCN_Medium.otf"
-                        tools:ignore="MissingPrefix"
+                        android:visibility="gone"
                         android:textColorHint="@color/viewBackground"
                         android:padding="4dp"
+                        android:textAlignment="viewStart"
                         android:textSize="16sp" />
                 </FrameLayout>
             </LinearLayout>
@@ -356,9 +355,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
+                android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
-                android:layout_marginRight="25dp"
+                android:layout_marginRight="11dp"
                 android:orientation="horizontal">
 
                 <CheckBox
@@ -368,6 +367,15 @@
                     android:text="@string/have_read"
                     fontPath="fonts/GE_SS_Two_Light.otf"
                     tools:ignore="MissingPrefix"
+                    android:checked="false"
+                    android:buttonTint="@color/colorPrimary"
+                    android:outlineAmbientShadowColor="@color/colorPrimary"
+                    android:textColorHint="@color/colorPrimary"
+                    android:shadowColor="@color/colorPrimary"
+                    android:outlineSpotShadowColor="@color/colorPrimary"
+                    android:textColorHighlight="@color/colorPrimary"
+                    android:textColorLink="@color/colorPrimary"
+                    android:backgroundTint="@color/colorPrimary"
                     android:textColor="@android:color/black"
                     android:textSize="15sp" />
 
@@ -391,11 +399,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
-                android:layout_marginTop="35dp"
+                android:layout_marginTop="33dp"
                 android:layout_marginRight="15dp"
-                android:elevation="@dimen/_6sdp"
-                app:cardCornerRadius="@dimen/_6sdp"
-                app:cardElevation="@dimen/_4sdp"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="2dp"
                 app:cardBackgroundColor="@color/colorPrimary"
                 >
                 <TextView

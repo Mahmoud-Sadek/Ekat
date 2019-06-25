@@ -64,7 +64,7 @@ public class AnimalWantedFragment extends Fragment {
     }
 
     private void initUI() {
-        tabTxt.setText(R.string.add_ads_free);
+        tabTxt.setText(R.string.animal_wanted);
 
         imageModelList = new ArrayList<>();
         //upload_images_recycler
@@ -73,7 +73,7 @@ public class AnimalWantedFragment extends Fragment {
         imageAdapter = new ImageAdapter(imageModelList, getContext());
         upload_images_recycler.setAdapter(imageAdapter);
 
-        Typeface typeFace=Typeface.createFromAsset(getContext().getAssets(),"fonts/BCN_Medium.otf");
+        Typeface typeFace=Typeface.createFromAsset(getContext().getAssets(),"fonts/Tajawal-Bold.ttf");
         ccp.setTypeFace(typeFace);
 
     }

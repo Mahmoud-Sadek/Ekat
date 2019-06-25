@@ -14,8 +14,10 @@ import android.view.View;
 import android.view.animation.AlphaAnimation;
 
 import com.sadek.ekatapp.R;
+import com.sadek.ekatapp.utils.Common;
 import com.sadek.ekatapp.utils.LocaleUtils;
 
+import io.paperdb.Paper;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
@@ -37,6 +39,8 @@ public class BaseActitvty extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         LocaleUtils.initialize(getBaseContext(), LocaleUtils.ARABIC);
+        Paper.init(this);
+        Paper.book().write(Common.Language,LocaleUtils.ARABIC);
 //        overridePendingTransition(R.anim.animation_up, R.anim.animation_down);
 //        setContentView(R.layout.activity_base);
 //

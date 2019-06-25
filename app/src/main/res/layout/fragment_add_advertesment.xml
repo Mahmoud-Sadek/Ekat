@@ -31,6 +31,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/post_details"
+                fontPath="fonts/GE_SS_Two_Light.otf"
+                tools:ignore="MissingPrefix"
                 android:textColor="@color/textGrayColor"
                 android:textSize="14sp" />
 
@@ -46,10 +48,9 @@
                     android:layout_weight="1"
                     android:background="@android:color/transparent"
                     android:hint="@string/post_details_ex"
+                    android:textAlignment="viewStart"
                     android:textColorHint="@color/viewBackground"
                     android:inputType="text"
-                    fontPath="fonts/BCN_Medium.otf"
-                    tools:ignore="MissingPrefix"
                     android:padding="6dp"
                     android:textSize="13sp" />
             </LinearLayout>
@@ -59,6 +60,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="@string/choose_section"
+                fontPath="fonts/GE_SS_Two_Light.otf"
+                tools:ignore="MissingPrefix"
                 android:textColor="@color/textGrayColor"
                 android:textSize="14sp" />
 
@@ -83,8 +86,6 @@
                         android:gravity="center_vertical"
                         android:hint="@string/what_want_to_advertise"
                         android:padding="4dp"
-                        fontPath="fonts/BCN_Medium.otf"
-                        tools:ignore="MissingPrefix"
                         android:textSize="14sp" />
 
                     <Spinner
@@ -102,6 +103,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="@string/price_required"
+                fontPath="fonts/GE_SS_Two_Light.otf"
+                tools:ignore="MissingPrefix"
                 android:textColor="@color/textGrayColor"
                 android:textSize="14sp" />
 
@@ -117,8 +120,9 @@
                     android:layout_weight="1"
                     android:background="@android:color/transparent"
                     android:inputType="number"
+                    android:textAlignment="viewStart"
                     android:padding="6dp"
-                    fontPath="fonts/BCN_Medium.otf"
+                    fontPath="fonts/Tajawal-Bold.ttf"
                     tools:ignore="MissingPrefix"
                     android:textSize="13sp" />
             </LinearLayout>
@@ -128,6 +132,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="@string/ad_description"
+                fontPath="fonts/GE_SS_Two_Light.otf"
+                tools:ignore="MissingPrefix"
                 android:textColor="@color/textGrayColor"
                 android:textSize="14sp" />
 
@@ -146,7 +152,8 @@
                     android:hint="@string/ad_description_ex"
                     android:inputType="textMultiLine"
                     android:lines="8"
-                    fontPath="fonts/BCN_Medium.otf"
+                    android:textAlignment="viewStart"
+                    fontPath="fonts/Tajawal-Bold.ttf"
                     tools:ignore="MissingPrefix"
                     android:textColorHint="@color/viewBackground"
                     android:maxLines="10"
@@ -163,7 +170,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="14dp"
                 android:text="@string/can_upload_more_than_one_image"
-                android:textColor="@color/viewBackground"
+                android:textColor="@color/textGrayColor"
                 android:textSize="13sp"
                 android:textStyle="bold" />
 
@@ -171,16 +178,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/uploading_photos_will_increase_views_over_your_ad"
-                android:textColor="@color/viewBackground"
+                android:textColor="@color/textGrayColor"
                 fontPath="fonts/GE_SS_Two_Light.otf"
                 android:textSize="11sp"
                 tools:ignore="MissingPrefix" />
 
             <FrameLayout
                 android:id="@+id/add_advert_upload_photo"
-                android:layout_width="130dp"
+                android:layout_width="108dp"
                 android:layout_height="38dp"
-                android:layout_margin="6dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp"
                 android:background="@drawable/button_upload">
 
                 <ImageView
@@ -212,7 +220,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
+                android:layout_height="33dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="15dp"
@@ -221,8 +229,8 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
                     android:layout_margin="1dp"
                     android:background="@color/colorPrimary"
                     android:padding="4dp"
@@ -236,9 +244,8 @@
                     android:layout_weight="1"
                     android:background="@android:color/transparent"
                     android:hint="@string/name"
+                    android:textAlignment="viewStart"
                     android:inputType="text"
-                    fontPath="fonts/BCN_Medium.otf"
-                    tools:ignore="MissingPrefix"
                     android:textColorHint="@color/viewBackground"
                     android:padding="4dp"
                     android:textSize="16sp" />
@@ -256,15 +263,15 @@
 
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_height="35dp"
+                    android:layout_height="33dp"
                     android:layout_weight="1"
                     android:background="@drawable/text_background"
                     android:layoutDirection="rtl"
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
                         android:layout_margin="1dp"
                         android:background="@color/colorPrimary"
                         android:padding="4dp"
@@ -278,7 +285,7 @@
                         android:layout_weight="1"
                         android:background="@android:color/transparent"
                         android:gravity="end|center"
-                        fontPath="fonts/BCN_Medium.otf"
+                        fontPath="fonts/Tajawal-Bold.ttf"
                         tools:ignore="MissingPrefix"
                         android:hint="@string/phone"
                         android:inputType="phone"
@@ -295,14 +302,14 @@
                     android:layout_gravity="center"
                     android:layout_margin="2dp"
                     app:ccp_hideNameCode="true"
-                    fontPath="fonts/BCN_Medium.otf"
+                    fontPath="fonts/Tajawal-Bold.ttf"
                     tools:ignore="MissingPrefix"
                     app:ccp_defaultNameCode="EG" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
+                android:layout_height="33dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="15dp"
@@ -311,8 +318,8 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
                     android:layout_margin="1dp"
                     android:background="@color/colorPrimary"
                     android:padding="4dp"
@@ -324,10 +331,11 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="6dp"
                     android:layout_weight="1"
-                    fontPath="fonts/BCN_Medium.otf"
+                    fontPath="fonts/Tajawal-Bold.ttf"
                     tools:ignore="MissingPrefix"
                     android:background="@android:color/transparent"
                     android:hint="@string/email"
+                    android:textAlignment="viewStart"
                     android:textColorHint="@color/viewBackground"
                     android:inputType="textEmailAddress"
                     android:padding="4dp"
@@ -337,7 +345,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
+                android:layout_height="33dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="15dp"
@@ -346,8 +354,8 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
                     android:layout_margin="1dp"
                     android:background="@color/colorPrimary"
                     android:padding="4dp"
@@ -390,7 +398,8 @@
                         android:textColorHint="@color/viewBackground"
                         android:inputType="text"
                         android:padding="4dp"
-                        fontPath="fonts/BCN_Medium.otf"
+                        android:textAlignment="viewStart"
+                        fontPath="fonts/Tajawal-Bold.ttf"
                         tools:ignore="MissingPrefix"
                         android:textSize="16sp" />
                 </FrameLayout>
@@ -405,6 +414,10 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="25dp"
                 android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/register_confirm_checkbox"
@@ -420,21 +433,22 @@
                     android:id="@+id/login_privacy_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginRight="4dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp"
                     android:gravity="center"
                     android:text="@string/privacy_policy"
                     android:textColor="@color/colorPrimary"
                     android:textSize="16sp" />
-
+            </LinearLayout>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="center"
+                    fontPath="fonts/GE_SS_Two_Light.otf"
+                    tools:ignore="MissingPrefix"
                     android:text="سيتم نشر اعلانك في اقرب وقت"
                     android:textColor="@android:color/black"
-                    android:textSize="16sp"
-                    android:visibility="gone" />
+                    android:textSize="14sp" />
             </LinearLayout>
 
             <android.support.v7.widget.CardView
@@ -442,14 +456,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
-                android:layout_marginTop="35dp"
+                android:layout_marginTop="33dp"
                 android:layout_marginRight="15dp"
-                android:elevation="@dimen/_6sdp"
                 android:layout_marginBottom="15dp"
-                app:cardCornerRadius="@dimen/_6sdp"
-                app:cardElevation="@dimen/_4sdp"
                 app:cardBackgroundColor="@color/colorPrimary"
-                >
+                app:cardCornerRadius="5dp"
+                app:cardElevation="2dp">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

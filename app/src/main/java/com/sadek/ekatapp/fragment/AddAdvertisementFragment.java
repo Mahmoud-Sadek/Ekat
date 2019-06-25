@@ -78,7 +78,7 @@ public class AddAdvertisementFragment extends Fragment {
         imageAdapter = new ImageAdapter(imageModelList, getContext());
         upload_images_recycler.setAdapter(imageAdapter);
 
-        Typeface typeFace=Typeface.createFromAsset(getContext().getAssets(),"fonts/BCN_Medium.otf");
+        Typeface typeFace=Typeface.createFromAsset(getContext().getAssets(),"fonts/Tajawal-Bold.ttf");
         ccp.setTypeFace(typeFace);
 
     }

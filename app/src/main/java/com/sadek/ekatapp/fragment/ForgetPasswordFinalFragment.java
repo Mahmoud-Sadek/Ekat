@@ -25,6 +25,7 @@ public class ForgetPasswordFinalFragment extends Fragment {
     EditText forget_password_confirm_pass_txt;
 
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_forget_password_final, container, false);
@@ -40,6 +41,7 @@ public class ForgetPasswordFinalFragment extends Fragment {
     private void initUI() {
 
     }
+
 
 
     //forget_password_code_continue_btn

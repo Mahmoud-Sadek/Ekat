@@ -10,7 +10,7 @@
         android:id="@+id/toolbars"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/white"
+        android:background="@color/backgroundScreens"
         app:popupTheme="@style/AppTheme.PopupOverlay"
         android:contentInsetLeft="0dp"
         android:contentInsetStart="0dp"
@@ -28,6 +28,7 @@
 
 
             <ImageView
+                android:id="@+id/app_bar_back_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"

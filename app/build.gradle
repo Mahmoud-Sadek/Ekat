@@ -21,11 +21,13 @@ android {
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
+//        buildConfigField("int", "DELAY", "0")
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
             minifyEnabled false
+//            buildConfigField("int", "DELAY", "0")
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -41,6 +43,8 @@ dependencies {
     implementation 'com.android.support:design:28.0.0'
     implementation 'com.android.support:recyclerview-v7:28.0.0-rc02'
     implementation 'com.android.support:cardview-v7:28.0.0-rc02'
+
+    implementation 'com.kaopiz:kprogresshud:1.2.0'
 
     //indicator
     implementation 'me.relex:circleindicator:2.1.0'
@@ -86,6 +90,8 @@ dependencies {
     implementation 'com.github.Shashank02051997:FancyAlertDialog-Android:0.1'
     implementation 'com.github.andyxialm:ColorDialog:1.0.0'
 
+    //sharedprefrence
+    implementation 'io.paperdb:paperdb:2.6'
     // Realm
 //    implementation 'io.realm:realm-android:0.82.1'
 

@@ -118,4 +118,12 @@
     <string name="counting">الكمية</string>
     <string name="kind">نوع الحيوان</string>
     <string name="code">كود</string>
+    <string name="how_help_you">كيف يمكننا مساعدتك</string>
+    <string name="message">رسالتك</string>
+    <string name="send_email">ارسال بريد الكتروني</string>
+    <string name="order_details">تفاصيل الطلب</string>
+    <string name="video_about">فديو عن</string>
+    <string name="pay_by_visa_description">ادفع بامان باستخدام بطاقتك الإئتمانية</string>
+    <string name="sucess">تم بنجاح</string>
+    <string name="your_acount_susessfly_created">تم انشاء حسابك بنجاح</string>
 </resources>

@@ -26,7 +26,7 @@
         android:background="@drawable/background_cash"
         android:inputType="number"
         android:padding="4dp"
-        fontPath="fonts/BCN_Medium.otf"
+        fontPath="fonts/Tajawal-Bold.ttf"
         tools:ignore="MissingPrefix"
         android:text="1"
         android:textStyle="bold"

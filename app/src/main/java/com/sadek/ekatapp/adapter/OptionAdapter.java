@@ -63,15 +63,18 @@ public class OptionAdapter extends RecyclerView.Adapter<OptionAdapter.ViewHolder
             }
         });
         if (row_index == position) {
-            holder.option_background.setBackgroundColor(mContext.getResources().getColor(R.color.textGrayColor));
+
             if (type ==0)
             holder.option_checked_image.setVisibility(View.VISIBLE);
             else if (type ==1)
                 holder.option_txt.setBackgroundColor(Color.parseColor("#ffd2e6a0"));
-
+            else
+                holder.option_background.setBackgroundColor(mContext.getResources().getColor(R.color.textGrayColor));
         } else {
-            holder.option_background.setBackgroundColor(mContext.getResources().getColor(android.R.color.white));
+//            holder.option_background.setBackgroundColor(mContext.getResources().getColor(android.R.color.white));
             holder.option_checked_image.setVisibility(View.GONE);
+            holder.option_background.setBackgroundColor(mContext.getResources().getColor(android.R.color.transparent));
+
         }
     }
 

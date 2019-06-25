@@ -61,6 +61,12 @@ public class LoginFragment extends Fragment {
 
     }
 
+    //app_bar_back_btn
+    @OnClick(R.id.app_bar_back_btn)
+    void app_bar_back_btn(View view) {
+        getActivity().onBackPressed();
+    }
+
 
     //login_btn
     @OnClick(R.id.login_btn)
@@ -86,6 +92,7 @@ public class LoginFragment extends Fragment {
     private Boolean validate() {
         login_password_txt.setError(null);
         login_email_txt.setError(null);
+
         String email = login_email_txt.getText().toString();
         String pass = login_password_txt.getText().toString();
         if (email.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {

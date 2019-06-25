@@ -9,9 +9,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.util.Locale;
 
-/**
- * Created by Eng Ali on 1/2/2019.
- */
+
 public class LocaleUtils {
 
     @Retention(RetentionPolicy.SOURCE)

@@ -45,7 +45,7 @@ public class OrderDeliveryDetailsFragment extends Fragment {
         tabTxt.setText(R.string.order_delivery_details);
 
 
-        Typeface typeFace=Typeface.createFromAsset(getContext().getAssets(),"fonts/BCN_Medium.otf");
+        Typeface typeFace=Typeface.createFromAsset(getContext().getAssets(),"fonts/Tajawal-Bold.ttf");
         ccp.setTypeFace(typeFace);
        }
 

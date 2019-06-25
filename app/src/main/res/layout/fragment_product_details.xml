@@ -9,7 +9,7 @@
 
     <include
         android:id="@+id/include"
-        layout="@layout/product_app_bar"
+        layout="@layout/product_new_app_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -22,99 +22,37 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:clipToPadding="false"
+            android:layout_marginTop="8dp"
             android:layout_marginBottom="120dp"
+            android:clipToPadding="false"
             android:orientation="vertical">
 
-            <RelativeLayout
+
+            <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:clipToPadding="false"
-                android:layout_margin="@dimen/_5sdp"
-                android:background="@android:color/white"
-                android:elevation="@dimen/_8sdp">
+                android:layout_height="match_parent"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="-3dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginBottom="6dp"
+                app:cardCornerRadius="3dp"
+                app:cardElevation="6dp">
 
-                <FrameLayout
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingTop="3dp">
 
                     <FrameLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@android:color/white">
-
-                        <android.support.v7.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            app:cardCornerRadius="@dimen/_6sdp"
-                            android:layout_marginTop="@dimen/_242sdp">
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-
-
-                            <TextView
-                                android:id="@+id/product_detail_product_title"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="8dp"
-                                android:text="طائر جديد"
-                                android:textColor="@color/textBlackColor"
-                                android:textSize="18sp"
-                                android:textStyle="bold" />
-
-
-                            <TextView
-                                android:id="@+id/product_detail_available_count"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="end"
-                                android:padding="2dp"
-                                android:text="متوفر 10 في المخرن"
-                                android:textColor="@color/colorPrimaryDark"
-                                android:textSize="15sp" />
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal"
-                                android:paddingLeft="8dp"
-                                android:paddingRight="8dp"
-                                android:paddingBottom="10dp">
-
-                                <TextView
-                                    android:id="@+id/product_detail_old_price"
-                                    fontPath="fonts/BCN_Medium.otf"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="17 د.ا"
-                                    android:textColor="@color/textBlackColor"
-                                    android:textSize="18sp"
-                                    tools:ignore="MissingPrefix" />
-
-                                <TextView
-                                    android:id="@+id/product_detail_real_price"
-                                    fontPath="fonts/BCN_Medium.otf"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:paddingStart="8sp"
-                                    android:text="17 د.ا"
-                                    android:textSize="18sp"
-                                    tools:ignore="MissingPrefix" />
-                            </LinearLayout>
-                        </LinearLayout>
-                        </android.support.v7.widget.CardView>
-                    </FrameLayout>
-
-                    <FrameLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_240sdp"
+                        android:layout_height="245dp"
+                        android:layout_marginBottom="7dp"
                         android:background="@android:color/white">
 
                         <ImageView
                             android:layout_width="250dp"
-                            android:layout_height="250dp"
+                            android:layout_height="230dp"
                             android:layout_gravity="center"
                             android:src="@drawable/logo"
                             android:visibility="visible" />
@@ -141,16 +79,231 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="@color/colorAccent"
-                            android:padding="4dp"
+                            android:padding="1dp"
                             android:text="وصل حديثا"
                             android:textColor="@android:color/white"
                             android:textSize="14sp" />
                     </FrameLayout>
 
-                </FrameLayout>
-            </RelativeLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
 
+                        <TextView
+                            android:id="@+id/product_detail_product_title"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="1"
+                            android:text="فارسي بيكي فيس"
+                            android:textColor="@color/textBlackColor"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+
+                        <TextView
+                            android:id="@+id/product_detail_available_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:padding="2dp"
+                            tools:ignore="MissingPrefix"
+                            fontPath="fonts/Tajawal-Bold.ttf"
+                            android:text="متوفر 10 في المخرن"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="10dp">
+
+                        <TextView
+                            android:id="@+id/product_detail_old_price"
+                            fontPath="fonts/Tajawal-Bold.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="17 د.ا"
+                            android:textColor="@color/textBlackColor"
+                            android:textSize="18sp"
+                            tools:ignore="MissingPrefix" />
+
+                        <TextView
+                            android:id="@+id/product_detail_real_price"
+                            fontPath="fonts/Tajawal-Bold.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="8sp"
+                            android:text="17 د.ا"
+                            android:textSize="18sp"
+                            tools:ignore="MissingPrefix" />
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <!--
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:paddingTop="4dp"
+                            android:paddingBottom="5dp">
+                       &lt;!&ndash; <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:background="@android:color/transparent">
+
+                            <android.support.v7.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                app:cardBackgroundColor="@android:color/white"
+                                android:layout_gravity="bottom"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="6dp"/>
+                        </FrameLayout>&ndash;&gt;
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:layout_marginBottom="1dp">
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent">
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_gravity="bottom"
+                                    android:background="@android:color/transparent">
+
+                                    <android.support.v7.widget.CardView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        app:cardCornerRadius="6dp"
+                                        app:cardElevation="6dp"
+                                        app:cardBackgroundColor="@android:color/white">
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:layout_gravity="bottom"
+                                        android:paddingTop="24dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+
+                                        <TextView
+                                            android:id="@+id/product_detail_product_title"
+                                            android:layout_width="0dp"
+                                            android:layout_weight="1"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:text="فارسي بيكي فيس"
+                                            android:textColor="@color/textBlackColor"
+                                            android:textSize="18sp"
+                                            android:textStyle="bold" />
+
+
+                                        <TextView
+                                            android:id="@+id/product_detail_available_count"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="end"
+                                            android:padding="2dp"
+                                            android:text="متوفر 10 في المخرن"
+                                            android:textColor="@color/colorPrimaryDark"
+                                            android:textSize="15sp" />
+                                    </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal"
+                                            android:paddingLeft="8dp"
+                                            android:paddingRight="8dp"
+                                            android:paddingBottom="10dp">
+
+                                            <TextView
+                                                android:id="@+id/product_detail_old_price"
+                                                fontPath="fonts/Tajawal-Bold.ttf"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="17 د.ا"
+                                                android:textColor="@color/textBlackColor"
+                                                android:textSize="18sp"
+                                                tools:ignore="MissingPrefix" />
+
+                                            <TextView
+                                                android:id="@+id/product_detail_real_price"
+                                                fontPath="fonts/Tajawal-Bold.ttf"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:paddingStart="8sp"
+                                                android:text="17 د.ا"
+                                                android:textSize="18sp"
+                                                tools:ignore="MissingPrefix" />
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                    </android.support.v7.widget.CardView>
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="245dp"
+                                    android:layout_marginBottom="70dp"
+                                    android:background="@android:color/white">
+
+                                    <ImageView
+                                        android:layout_width="250dp"
+                                        android:layout_height="230dp"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/logo"
+                                        android:visibility="visible" />
+
+
+                                    <android.support.v7.widget.RecyclerView
+                                        android:id="@+id/product_detail_slider_recycler"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:focusable="true"
+                                        android:nestedScrollingEnabled="true" />
+
+                                    <com.sadek.ekatapp.view.CircleIndicator2
+                                        android:id="@+id/product_detail_slider_indicator"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="bottom|center"
+                                        android:layout_marginBottom="4dp"
+                                        android:padding="8dp" />
+
+
+                                    <TextView
+                                        android:id="@+id/product_detail_slider_kind"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/colorAccent"
+                                        android:padding="1dp"
+                                        android:text="وصل حديثا"
+                                        android:textColor="@android:color/white"
+                                        android:textSize="14sp" />
+                                </FrameLayout>
+
+                            </FrameLayout>
+                        </RelativeLayout>
+
+                        </FrameLayout>-->
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -162,13 +315,14 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
                     android:orientation="vertical">
 
                     <LinearLayout
                         android:id="@+id/product_detail_color_layout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="1dp"
                         android:orientation="vertical"
                         android:padding="4dp">
 
@@ -178,8 +332,8 @@
                             android:orientation="horizontal">
 
                             <ImageView
-                                android:layout_width="24dp"
-                                android:layout_height="24dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:layout_gravity="center"
                                 android:padding="1dp"
                                 android:src="@drawable/ic_paint_color"
@@ -189,7 +343,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="start"
-                                android:padding="10dp"
+                                android:layout_marginStart="4dp"
+                                android:padding="2dp"
                                 android:text="@string/color"
                                 android:textColor="@color/textGrayColor"
                                 android:textSize="14sp"
@@ -207,7 +362,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="0.4dp"
                             android:layout_marginLeft="10dp"
-                            android:layout_marginTop="4dp"
+                            android:layout_marginTop="2dp"
                             android:layout_marginRight="10dp"
                             android:background="@color/viewBackground" />
                     </LinearLayout>
@@ -216,7 +371,7 @@
                         android:id="@+id/product_detail_size_layout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="1dp"
                         android:orientation="vertical"
                         android:padding="4dp">
 
@@ -226,9 +381,10 @@
                             android:orientation="horizontal">
 
                             <ImageView
-                                android:layout_width="24dp"
-                                android:layout_height="24dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:layout_gravity="center"
+                                android:padding="3dp"
                                 android:src="@drawable/ic_maximize"
                                 android:tint="@color/textBlackColor" />
 
@@ -236,7 +392,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="start"
-                                android:padding="10dp"
+                                android:layout_marginStart="4dp"
+                                android:padding="2dp"
                                 android:text="@string/size"
                                 android:textColor="@color/textGrayColor"
                                 android:textStyle="bold" />
@@ -253,7 +410,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="0.4dp"
                             android:layout_marginLeft="10dp"
-                            android:layout_marginTop="4dp"
+                            android:layout_marginTop="2dp"
                             android:layout_marginRight="10dp"
                             android:background="@color/viewBackground" />
                     </LinearLayout>
@@ -262,7 +419,7 @@
                         android:id="@+id/product_detail_ruler_layout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="2dp"
                         android:orientation="vertical"
                         android:padding="4dp">
 
@@ -272,9 +429,10 @@
                             android:orientation="horizontal">
 
                             <ImageView
-                                android:layout_width="24dp"
-                                android:layout_height="24dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:layout_gravity="center"
+                                android:padding="2dp"
                                 android:src="@drawable/ic_ruler"
                                 android:tint="@color/textBlackColor" />
 
@@ -282,7 +440,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="start"
-                                android:padding="10dp"
+                                android:layout_marginStart="4dp"
+                                android:padding="2dp"
                                 android:text="@string/ruler"
                                 android:textColor="@color/textGrayColor"
                                 android:textStyle="bold" />
@@ -299,7 +458,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="0.4dp"
                             android:layout_marginLeft="10dp"
-                            android:layout_marginTop="4dp"
+                            android:layout_marginTop="1dp"
                             android:layout_marginRight="10dp"
                             android:background="@color/viewBackground" />
                     </LinearLayout>
@@ -315,20 +474,24 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"
                             android:orientation="horizontal">
 
                             <ImageView
-                                android:layout_width="24dp"
-                                android:layout_height="24dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:layout_gravity="center"
                                 android:src="@drawable/ic_counting"
                                 android:tint="@color/textBlackColor" />
 
                             <TextView
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_height="match_parent"
                                 android:layout_gravity="start"
-                                android:padding="10dp"
+                                android:layout_marginStart="4dp"
+                                android:gravity="center"
+                                android:padding="2dp"
                                 android:text="@string/counting"
                                 android:textColor="@color/textGrayColor"
                                 android:textStyle="bold" />
@@ -361,7 +524,7 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="60dp"
+                        android:layout_height="50dp"
                         android:gravity="center"
                         android:orientation="horizontal">
 
@@ -378,9 +541,9 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="start|center"
                             android:paddingLeft="6dp"
-                            android:paddingTop="10dp"
+                            android:paddingTop="5dp"
                             android:paddingRight="6dp"
-                            android:paddingBottom="10dp"
+                            android:paddingBottom="5dp"
                             android:text="@string/more_details_about"
                             android:textStyle="bold" />
 
@@ -392,7 +555,7 @@
                             android:layout_weight="1"
                             android:paddingTop="10dp"
                             android:paddingBottom="10dp"
-                            android:text="@string/more_details_about"
+                            android:text="فارسي بيكي فيس"
                             android:textStyle="bold" />
 
                         <TextView
@@ -436,7 +599,7 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="60dp"
+                        android:layout_height="50dp"
                         android:orientation="horizontal">
 
                         <ImageView
@@ -452,10 +615,10 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="start|center"
                             android:paddingLeft="6dp"
-                            android:paddingTop="10dp"
+                            android:paddingTop="5dp"
                             android:paddingRight="6dp"
-                            android:paddingBottom="10dp"
-                            android:text="@string/more_details_about"
+                            android:paddingBottom="5dp"
+                            android:text="@string/video_about"
                             android:textStyle="bold" />
 
                         <TextView
@@ -466,7 +629,7 @@
                             android:layout_weight="1"
                             android:paddingTop="10dp"
                             android:paddingBottom="10dp"
-                            android:text="@string/more_details_about"
+                            android:text="فارسي بيكي فيس"
                             android:textStyle="bold" />
 
                         <TextView
@@ -521,11 +684,11 @@
                             android:tint="@color/textGrayColor" />
 
                         <TextView
-                            fontPath="fonts/GE_SS_Two_Light.otf"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="start"
                             android:padding="10dp"
+                            fontPath="fonts/Tajawal-Medium.ttf"
                             android:text="تسليم خلال 4-2 ايام عمل"
                             tools:ignore="MissingPrefix" />
 
@@ -540,6 +703,7 @@
                             android:layout_width="24dp"
                             android:layout_height="24dp"
                             android:layout_gravity="center"
+                            android:padding="2dp"
                             android:src="@drawable/ic_wallet"
                             android:tint="@color/textGrayColor" />
 
@@ -549,7 +713,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="start"
                             android:padding="10dp"
-                            android:text="تقبل الدفع بواسطه بطاقة الائتمان والتحويل البنكي والدفع عند الاستلام"
+                            android:text="نقبل الدفع بواسطه بطاقة الائتمان والتحويل البنكي والدفع عند الاستلام"
                             tools:ignore="MissingPrefix" />
 
                     </LinearLayout>
@@ -594,7 +758,7 @@
 
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/_25sdp"
                 android:layout_margin="4dp"
                 android:elevation="4dp"
                 app:cardCornerRadius="4dp">
@@ -602,8 +766,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="start"
-                    android:padding="10dp"
+                    android:layout_gravity="start|center"
+                    android:paddingStart="4dp"
                     android:text="@string/you_may_like"
                     android:textColor="@color/textBlackColor"
                     android:textStyle="bold" />

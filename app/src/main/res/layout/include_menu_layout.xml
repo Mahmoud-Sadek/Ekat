@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/backgroundScreens"
     android:orientation="vertical">
 
@@ -10,138 +10,147 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:elevation="@dimen/_8sdp"
         android:background="@color/barBackground"
+        android:elevation="2dp"
         android:orientation="vertical">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/barBackground"
-        android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="اهلا بيك يا محمد"
-                android:textSize="@dimen/_14sdp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="ekcat@gmail.com"
-                fontPath="fonts/GE_SS_Two_Light.otf"
-                tools:ignore="MissingPrefix"
-                android:textSize="11sp" />
-        </LinearLayout>
-
-        <ImageView
-            android:id="@+id/menu_close_btn"
-            android:layout_width="30dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:padding="5dp"
-            android:src="@drawable/ic_close_black" />
-    </LinearLayout>
-
-        <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/barBackground">
-
-        <LinearLayout
-            android:id="@+id/profileParent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="21dp"
-            android:layout_marginTop="@dimen/_4sdp"
-            android:layout_marginRight="21dp"
+            android:background="@color/barBackground"
             android:orientation="horizontal">
 
             <LinearLayout
-                android:id="@+id/menu_home_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="@dimen/_20sdp"
-                    android:layout_height="@dimen/_20sdp"
-                    android:src="@drawable/ic_home"
-                    android:tint="@color/colorPrimaryDark" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:padding="2dp"
-                    android:text="@string/home"
-                    android:textColor="@color/textGrayColor"
-                    android:textSize="9sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/menu_my_account_btn"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:paddingLeft="6dp"
-                android:paddingRight="6dp">
-
-                <ImageView
-                    android:layout_width="@dimen/_20sdp"
-                    android:layout_height="@dimen/_20sdp"
-                    android:src="@drawable/ic_user"
-                    android:tint="@color/colorPrimaryDark" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:padding="2dp"
-                    android:text="@string/profile"
-                    android:textColor="@color/textGrayColor"
-                    android:textSize="9sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/menu_cart_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
                 android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="@dimen/_20sdp"
-                    android:layout_height="@dimen/_20sdp"
-                    android:src="@drawable/ic_shopping_cart_black_24dp"
-                    android:tint="@color/colorPrimaryDark" />
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:padding="2dp"
-                    android:text="@string/cart"
-                    android:textColor="@color/textGrayColor"
-                    android:textSize="9sp" />
+                    android:paddingStart="6dp"
+                    android:text="اهلا بيك يا محمد"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold" />
 
+                <TextView
+                    fontPath="fonts/GE_SS_Two_Light.otf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="8dp"
+                    android:text="ekcat@gmail.com"
+                    android:textSize="11sp"
+                    tools:ignore="MissingPrefix" />
             </LinearLayout>
+
+            <ImageView
+                android:id="@+id/menu_close_btn"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:padding="5dp"
+                android:src="@drawable/ic_close_black" />
         </LinearLayout>
 
-        <include layout="@layout/include_sign_in" />
-    </FrameLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/barBackground">
+
+            <LinearLayout
+                android:id="@+id/profileParent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="21dp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginRight="21dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/menu_home_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:src="@drawable/ic_home"
+                        android:tint="@color/colorPrimaryDark" />
+
+                    <TextView
+                        fontPath="fonts/GE_SS_Two_Light.otf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="2dp"
+                        android:text="@string/home"
+                        android:textColor="@color/textGrayColor"
+                        android:textSize="9sp"
+                        tools:ignore="MissingPrefix" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/menu_my_account_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:src="@drawable/ic_user"
+                        android:tint="@color/colorPrimaryDark" />
+
+                    <TextView
+                        fontPath="fonts/GE_SS_Two_Light.otf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="2dp"
+                        android:text="@string/profile"
+                        android:textColor="@color/textGrayColor"
+                        android:textSize="9sp"
+                        tools:ignore="MissingPrefix" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/menu_cart_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:src="@drawable/ic_shopping_cart_black_24dp"
+                        android:tint="@color/colorPrimaryDark" />
+
+                    <TextView
+                        fontPath="fonts/GE_SS_Two_Light.otf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="2dp"
+                        android:text="@string/cart"
+                        android:textColor="@color/textGrayColor"
+                        android:textSize="9sp"
+                        tools:ignore="MissingPrefix" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <include layout="@layout/include_sign_in" />
+        </FrameLayout>
     </LinearLayout>
 
 
@@ -169,26 +178,25 @@
                     android:id="@+id/menu_order_animal_btn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
+                    android:layout_marginEnd="8dp"
                     android:elevation="4dp"
                     android:orientation="horizontal">
 
                     <TextView
+                        fontPath="fonts/GE_SS_Two_Light.otf"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:textColor="@color/textBlackColor"
                         android:padding="10dp"
-                        fontPath="fonts/GE_SS_Two_Light.otf"
-                        tools:ignore="MissingPrefix"
                         android:text="@string/animal_wanted"
-                        android:textSize="14sp" />
+                        android:textColor="@color/textprimaryColor"
+                        android:textSize="16sp"
+                        tools:ignore="MissingPrefix" />
 
                     <ImageView
                         android:layout_width="16dp"
-                        android:layout_height="16dp"
+                        android:layout_height="12dp"
                         android:layout_gravity="center"
                         android:src="@drawable/ic_chevron_left_black_24dp"
                         android:tint="@color/textBlackColor" />
@@ -199,7 +207,6 @@
                     android:layout_height="0.3dp"
                     android:layout_marginLeft="0dp"
                     android:layout_marginRight="0dp"
-                    android:layout_marginTop="4dp"
                     android:background="@color/viewBackground" />
 
                 <android.support.v7.widget.RecyclerView
@@ -210,26 +217,25 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
+                    android:layout_marginEnd="8dp"
                     android:elevation="4dp"
                     android:orientation="horizontal">
 
                     <TextView
+                        fontPath="fonts/GE_SS_Two_Light.otf"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
+                        android:padding="10dp"
                         android:text="@string/our_service"
-                        android:padding="10dp"
-                        fontPath="fonts/GE_SS_Two_Light.otf"
-                        tools:ignore="MissingPrefix"
-                        android:textColor="@color/textBlackColor"
-                        android:textSize="14sp" />
+                        android:textColor="@color/textprimaryColor"
+                        android:textSize="16sp"
+                        tools:ignore="MissingPrefix" />
 
                     <ImageView
                         android:layout_width="16dp"
-                        android:layout_height="16dp"
+                        android:layout_height="12dp"
                         android:layout_gravity="center"
                         android:src="@drawable/ic_chevron_left_black_24dp"
                         android:tint="@color/textBlackColor" />
@@ -238,7 +244,6 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="0.3dp"
-                    android:layout_marginTop="4dp"
                     android:layout_marginLeft="0dp"
                     android:layout_marginRight="0dp"
                     android:background="@color/viewBackground" />
@@ -246,26 +251,25 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
+                    android:layout_marginEnd="8dp"
                     android:elevation="4dp"
                     android:orientation="horizontal">
 
                     <TextView
+                        fontPath="fonts/GE_SS_Two_Light.otf"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:padding="10dp"
-                        fontPath="fonts/GE_SS_Two_Light.otf"
-                        tools:ignore="MissingPrefix"
-                        android:textColor="@color/textBlackColor"
                         android:text="@string/help"
-                        android:textSize="14sp" />
+                        android:textColor="@color/textprimaryColor"
+                        android:textSize="16sp"
+                        tools:ignore="MissingPrefix" />
 
                     <ImageView
                         android:layout_width="16dp"
-                        android:layout_height="16dp"
+                        android:layout_height="12dp"
                         android:layout_gravity="center"
                         android:src="@drawable/ic_chevron_left_black_24dp"
                         android:tint="@color/textBlackColor" />
@@ -276,29 +280,27 @@
                     android:layout_height="0.3dp"
                     android:layout_marginLeft="0dp"
                     android:layout_marginRight="0dp"
-                    android:layout_marginTop="4dp"
                     android:background="@color/viewBackground" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
+                    android:layout_marginEnd="8dp"
                     android:elevation="4dp"
                     android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/menu_logout_btn"
+                        fontPath="fonts/GE_SS_Two_Light.otf"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:padding="10dp"
-                        fontPath="fonts/GE_SS_Two_Light.otf"
-                        tools:ignore="MissingPrefix"
-                        android:textColor="@color/textBlackColor"
                         android:text="@string/logout"
-                        android:textSize="14sp" />
+                        android:textColor="@color/textprimaryColor"
+                        android:textSize="16sp"
+                        tools:ignore="MissingPrefix" />
 
                 </LinearLayout>
             </LinearLayout>
@@ -309,8 +311,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/_4sdp"
                 android:layout_marginTop="@dimen/_15sdp"
-                android:layout_marginBottom="16dp"
                 android:layout_marginRight="@dimen/_4sdp"
+                android:layout_marginBottom="16dp"
                 android:background="@drawable/background_list"
                 android:orientation="vertical">
 
@@ -318,8 +320,8 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
                     android:elevation="4dp"
                     android:orientation="horizontal">
 
@@ -331,20 +333,20 @@
                         android:tint="@color/textBlackColor" />
 
                     <TextView
+                        fontPath="fonts/GE_SS_Two_Light.otf"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        fontPath="fonts/GE_SS_Two_Light.otf"
-                        tools:ignore="MissingPrefix"
                         android:padding="10dp"
-                        android:textColor="@color/textBlackColor"
                         android:text="@string/arabic"
-                        android:textSize="14sp" />
+                        android:textColor="@color/textprimaryColor"
+                        android:textSize="16sp"
+                        tools:ignore="MissingPrefix" />
 
                     <ImageView
                         android:layout_width="16dp"
-                        android:layout_height="16dp"
+                        android:layout_height="12dp"
                         android:layout_gravity="center"
                         android:src="@drawable/ic_chevron_left_black_24dp"
                         android:tint="@color/textBlackColor" />
@@ -352,16 +354,14 @@
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
+                    android:layout_height="0.3dp"
                     android:background="@color/viewBackground" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
                     android:elevation="4dp"
                     android:orientation="horizontal">
 
@@ -372,20 +372,20 @@
                         android:src="@drawable/ic_egypt" />
 
                     <TextView
+                        fontPath="fonts/GE_SS_Two_Light.otf"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:padding="10dp"
-                        fontPath="fonts/GE_SS_Two_Light.otf"
-                        tools:ignore="MissingPrefix"
-                        android:textColor="@color/textBlackColor"
                         android:text="@string/country"
-                        android:textSize="14sp" />
+                        android:textColor="@color/textprimaryColor"
+                        android:textSize="16sp"
+                        tools:ignore="MissingPrefix" />
 
                     <ImageView
                         android:layout_width="16dp"
-                        android:layout_height="16dp"
+                        android:layout_height="12dp"
                         android:layout_gravity="center"
                         android:src="@drawable/ic_chevron_left_black_24dp"
                         android:tint="@color/textBlackColor" />
@@ -393,41 +393,39 @@
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
+                    android:layout_height="0.3dp"
                     android:background="@color/viewBackground" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
                     android:layout_marginLeft="6dp"
+                    android:layout_marginTop="4dp"
                     android:layout_marginRight="6dp"
                     android:orientation="horizontal">
 
                     <Button
                         android:id="@+id/menu_add_advertisement_btn"
+                        style="?android:attr/borderlessButtonStyle"
                         android:layout_width="0dp"
                         android:layout_height="40dp"
+                        android:layout_gravity="center"
                         android:layout_margin="6dp"
                         android:layout_weight="1"
-                        style="?android:attr/borderlessButtonStyle"
-                        android:elevation="0dp"
-                        android:layout_gravity="center"
                         android:background="#ff5ec16a"
+                        android:elevation="0dp"
                         android:text="@string/add_ads_free"
                         android:textColor="@android:color/white" />
 
                     <Button
+                        style="?android:attr/borderlessButtonStyle"
                         android:layout_width="0dp"
                         android:layout_height="40dp"
+                        android:layout_gravity="center"
                         android:layout_margin="6dp"
                         android:layout_weight="1"
-                        android:elevation="0dp"
-                        style="?android:attr/borderlessButtonStyle"
-                        android:layout_gravity="center"
                         android:background="#fff77d0e"
+                        android:elevation="0dp"
                         android:text="@string/animal_garden_service"
                         android:textColor="@android:color/white" />
                 </LinearLayout>

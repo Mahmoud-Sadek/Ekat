@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.sadek.ekatapp.R;
 import com.sadek.ekatapp.activity.MainActivity;
@@ -23,6 +24,10 @@ public class ForgetConfirmPhoneCodeFragment extends Fragment {
     @BindView(R.id.confirm_phone_code_txt)
     EditText confirm_phone_code_txt;
 
+    @BindView(R.id.tabTxt)
+    TextView tabTxt;
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_confirm_phone_code, container, false);
@@ -36,7 +41,7 @@ public class ForgetConfirmPhoneCodeFragment extends Fragment {
     }
 
     private void initUI() {
-
+        tabTxt.setText("");
     }
 
 
@@ -52,6 +57,12 @@ public class ForgetConfirmPhoneCodeFragment extends Fragment {
     @OnClick(R.id.confirm_phone_code_resent_code_btn)
     void confirm_phone_code_resent_code_btn(View view) {
         ((MainActivity)getContext()).switchToPage(12, null, R.string.app_name);
+    }
+
+    //app_bar_back_btn
+    @OnClick(R.id.app_bar_back_btn)
+    void app_bar_back_btn(View view) {
+        getActivity().onBackPressed();
     }
 
 

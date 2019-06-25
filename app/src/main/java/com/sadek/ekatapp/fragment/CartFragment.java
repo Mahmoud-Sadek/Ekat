@@ -37,6 +37,11 @@ public class CartFragment extends Fragment implements CartInterface {
     @BindView(R.id.cart_recycler)
     RecyclerView cart_recycler;
 
+    @BindView(R.id.cart_cart_layout)
+    View cart_cart_layout;
+    @BindView(R.id.cart_empty_cart_layout)
+    View cart_empty_cart_layout;
+
 
     CartAdapter cartAdapter;
     List<CartModel> cartModelList;
@@ -97,7 +102,16 @@ public class CartFragment extends Fragment implements CartInterface {
             cartModelList.add(cartModel);
             total_price += Double.parseDouble(cartModel.getPrice()) * Double.parseDouble(cartModel.getQuantity());
         }
-        cart_total_price.setText(total_price + "");
+        cart_total_price.setText(total_price + "د.ا");
+
+        if (total_price == 0.0){
+            cart_empty_cart_layout.setVisibility(View.VISIBLE);
+            cart_cart_layout.setVisibility(View.GONE);
+        }else {
+
+            cart_empty_cart_layout.setVisibility(View.GONE);
+            cart_cart_layout.setVisibility(View.VISIBLE);
+        }
     }
 
     //

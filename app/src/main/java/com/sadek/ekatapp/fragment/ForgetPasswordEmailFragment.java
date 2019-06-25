@@ -24,6 +24,7 @@ public class ForgetPasswordEmailFragment extends Fragment {
     EditText forget_password_email_txt;
 
 
+
     @BindView(R.id.tabTxt)
     TextView tabTxt;
 
@@ -41,9 +42,16 @@ public class ForgetPasswordEmailFragment extends Fragment {
     }
 
     private void initUI() {
+
         tabTxt.setText("");
     }
 
+
+    //app_bar_back_btn
+    @OnClick(R.id.app_bar_back_btn)
+    void app_bar_back_btn(View view) {
+        getActivity().onBackPressed();
+    }
 
     //forget_password_email_btn
     @OnClick(R.id.forget_password_email_btn)

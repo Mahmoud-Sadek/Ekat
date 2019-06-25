@@ -35,5 +35,11 @@ public class PrivacyPolicyFragment extends Fragment {
 
 
 
+    //app_bar_back_btn
+    @OnClick(R.id.app_bar_back_btn)
+    void app_bar_back_btn(View view) {
+        getActivity().onBackPressed();
+    }
+
 
 }

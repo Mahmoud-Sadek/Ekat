@@ -60,15 +60,15 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
         holder.order_date_txt.setText(contents.get(position).getOrderDate());
         if (contents.get(position).getOrderStatus().equals(Common.ORDER_STATUS_COMPLETED)) {
             holder.order_status_txt.setText(R.string.order_completed);
-            holder.order_status_image.setImageResource(R.drawable.order_completed);
+            holder.order_status_image.setImageResource(R.drawable.ic_checked_order);
             holder.order_status_txt.setTextColor(mContext.getResources().getColor(R.color.orderCompleted));
         }else if (contents.get(position).getOrderStatus().equals(Common.ORDER_STATUS_PROGRESS)) {
             holder.order_status_txt.setText(R.string.order_in_progress);
-            holder.order_status_image.setImageResource(R.drawable.order_in_progress);
+            holder.order_status_image.setImageResource(R.drawable.ic_time_left_order);
             holder.order_status_txt.setTextColor(mContext.getResources().getColor(R.color.orderProgress));
         }else if (contents.get(position).getOrderStatus().equals(Common.ORDER_STATUS_CANCELED)) {
             holder.order_status_txt.setText(R.string.order_canceled);
-            holder.order_status_image.setImageResource(R.drawable.order_not_completed);
+            holder.order_status_image.setImageResource(R.drawable.ic_error_order);
             holder.order_status_txt.setTextColor(mContext.getResources().getColor(R.color.orderCanceled));
         }
 

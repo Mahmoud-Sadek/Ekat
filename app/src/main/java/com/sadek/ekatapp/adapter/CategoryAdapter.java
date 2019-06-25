@@ -65,7 +65,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
         //sub_category_recycler
         final RecyclerView.LayoutManager mLayoutManager_sub_category = new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false);
         holder.sub_category_recycler.setLayoutManager(mLayoutManager_sub_category);
-        holder.categoryAdapter = new SubCategoryAdapter(holder.categoriesModels, mContext);
+        holder.categoryAdapter = new SubCategoryMenuAdapter(holder.categoriesModels, mContext);
         holder.sub_category_recycler.setAdapter(holder.categoryAdapter);
     }
 
@@ -78,7 +78,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
         ImageView sub_category_image;
 
 
-        SubCategoryAdapter categoryAdapter;
+        SubCategoryMenuAdapter categoryAdapter;
         List<MainCategoriesModel> categoriesModels;
 
         ViewHolder(View view) {
@@ -92,6 +92,16 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
             categoriesModels.add(new MainCategoriesModel("https://www.ekat.ae/wp-content/uploads/2019/04/vet-aquadent-247x296.jpg", "كلاب"));
             categoriesModels.add(new MainCategoriesModel("https://www.ekat.ae/wp-content/uploads/2019/04/vet-aquadent-247x296.jpg", "كلاب"));
             categoriesModels.add(new MainCategoriesModel("https://www.ekat.ae/wp-content/uploads/2019/04/vet-aquadent-247x296.jpg", "كلاب"));
+
+/*
+
+            categoriesModels.add(new MainCategoriesModel("https://www.ekat.ae/wp-content/uploads/2018/12/2018-12-18_03-03-17-2.jpg", "كلاب"));
+            categoriesModels.add(new MainCategoriesModel("https://www.ekat.ae/wp-content/uploads/2019/01/gromming-247x296.jpg", "قطط"));
+            categoriesModels.add(new MainCategoriesModel("https://www.ekat.ae/wp-content/uploads/2018/12/Golden-Pheasant-247x296.jpg", "طيور"));
+            categoriesModels.add(new MainCategoriesModel("https://www.ekat.ae/wp-content/uploads/2018/12/2018-12-18_03-03-17-2.jpg", "كلاب"));
+            categoriesModels.add(new MainCategoriesModel("https://www.ekat.ae/wp-content/uploads/2018/12/2018-12-18_03-03-17-1.jpg", "قطط"));
+            categoriesModels.add(new MainCategoriesModel("https://www.ekat.ae/wp-content/uploads/2018/12/Golden-Pheasant-247x296.jpg", "طيور"));
+*/
         }
 
 

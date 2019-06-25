@@ -10,8 +10,8 @@
 
     <ImageView
         android:id="@+id/item_cart_delete"
-        android:layout_width="@dimen/_20sdp"
-        android:layout_height="@dimen/_20sdp"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
         android:layout_gravity="end"
         android:src="@drawable/ic_close_black" />
     <LinearLayout
@@ -68,7 +68,7 @@
             android:layout_weight="1"
             android:layout_gravity="center"
             android:text="250 A.E.D"
-            fontPath="fonts/BCN_Medium.otf"
+            fontPath="fonts/Tajawal-Bold.ttf"
             tools:ignore="MissingPrefix"
             android:textColor="@color/textGrayColor"
             android:textSize="12sp" />

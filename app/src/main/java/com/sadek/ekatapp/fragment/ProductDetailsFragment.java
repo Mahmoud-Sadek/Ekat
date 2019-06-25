@@ -268,6 +268,7 @@ public class ProductDetailsFragment extends Fragment {
 
     @OnClick(R.id.product_detail_go_to_cart)
     void product_detail_go_to_cart(View view) {
+        addRecord();
         ((MainActivity) getContext()).switchToPage(16, null, R.string.app_name);
     }
 

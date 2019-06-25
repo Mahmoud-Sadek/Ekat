@@ -7,10 +7,11 @@
     <color name="textprimaryColor">#ff515151</color>
     <color name="textGrayColor">#9c9b9b</color>
     <color name="viewBackground">#589b9b9b</color>
-    <color name="barBackground">#36bebebe</color>
+    <color name="barBackground">#f0eff1</color>
+    <color name="barBackgroundDark">#d2d1d2</color>
 
     <color name="disableItem">#ffe6e9db</color>
-    <color name="backgroundScreens">#f3f2f5</color>
+    <color name="backgroundScreens">#fcf8f7f9</color>
 
 
     <color name="orderCompleted">#ffa8cd3f</color>

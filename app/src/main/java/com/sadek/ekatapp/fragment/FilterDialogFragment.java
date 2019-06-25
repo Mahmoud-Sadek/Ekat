@@ -65,14 +65,14 @@ public class FilterDialogFragment extends BottomSheetDialogFragment {
         fixed_rangeview.setOnTrackRangeListener(new SimpleRangeView.OnTrackRangeListener() {
             @Override
             public void onStartRangeChanged(@NotNull SimpleRangeView rangeView, int start) {
-                filter_min_txt.setText(String.valueOf(start));
+                filter_min_txt.setText(String.valueOf(start)+" د.أ");
 
             }
 
             @Override
             public void onEndRangeChanged(@NotNull SimpleRangeView rangeView, int end) {
 
-                filter_max_txt.setText(String.valueOf(end));
+                filter_max_txt.setText(String.valueOf(end)+" د.أ9");
             }
         });
 

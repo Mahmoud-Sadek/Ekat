@@ -48,7 +48,7 @@ public class MainActivity extends BaseActitvty {
         switch (page) {
 
             case 1:
-                getWindow().setStatusBarColor(getResources().getColor(android.R.color.white));
+//                getWindow().setStatusBarColor(getResources().getColor(R.color.textprimaryColor));
                 nextFragment = new MainFragment();
                 nextFragment.setArguments(bundle);
                 transaction.replace(R.id.head_container, nextFragment, name);
@@ -56,7 +56,7 @@ public class MainActivity extends BaseActitvty {
                 break;
 
             case 2:
-                getWindow().setStatusBarColor(getResources().getColor(android.R.color.white));
+//                getWindow().setStatusBarColor(getResources().getColor(android.R.color.white));
                 nextFragment = new ProductDetailsFragment();
                 nextFragment.setArguments(bundle);
                 transaction.replace(R.id.head_container, nextFragment, name);
@@ -65,7 +65,7 @@ public class MainActivity extends BaseActitvty {
                 break;
 
             case 3:
-                getWindow().setStatusBarColor(getResources().getColor(android.R.color.white));
+//                getWindow().setStatusBarColor(getResources().getColor(android.R.color.white));
                 nextFragment = new CategoryDetailsFragment();
                 nextFragment.setArguments(bundle);
                 transaction.replace(R.id.head_container, nextFragment, name);
@@ -201,9 +201,10 @@ public class MainActivity extends BaseActitvty {
         getTransaction().setCustomAnimations(R.anim.side_in, R.anim.side_out);
         overridePendingTransition(R.anim.side_in, R.anim.side_out);
         Fragment f = getSupportFragmentManager().findFragmentById(R.id.head_container);
-        if (f instanceof MainFragment||f instanceof ProductDetailsFragment||f instanceof CategoryDetailsFragment) {
-            getWindow().setStatusBarColor(getResources().getColor(android.R.color.white));
-        }else if (f instanceof MenuFragment) {
+//        if (f instanceof ProductDetailsFragment) {
+//            getWindow().setStatusBarColor(getResources().getColor(android.R.color.white));
+//        }else
+            if (f instanceof MenuFragment) {
             getWindow().setStatusBarColor(getResources().getColor(R.color.barBackground));
         }else  {
             getWindow().setStatusBarColor(getResources().getColor(R.color.colorPrimaryDark));

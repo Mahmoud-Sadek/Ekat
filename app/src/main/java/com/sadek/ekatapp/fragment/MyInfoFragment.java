@@ -46,7 +46,7 @@ public class MyInfoFragment extends Fragment {
 
 
 
-        Typeface typeFace=Typeface.createFromAsset(getContext().getAssets(),"fonts/BCN_Medium.otf");
+        Typeface typeFace=Typeface.createFromAsset(getContext().getAssets(),"fonts/Tajawal-Bold.ttf");
         ccp.setTypeFace(typeFace);
        }
 

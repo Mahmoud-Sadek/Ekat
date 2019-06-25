@@ -27,7 +27,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
+                android:layout_height="33dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="15dp"
@@ -36,8 +36,8 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
                     android:layout_margin="1dp"
                     android:background="@color/colorPrimary"
                     android:padding="4dp"
@@ -48,8 +48,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_marginStart="6dp"
-                    fontPath="fonts/BCN_Medium.otf"
-                    tools:ignore="MissingPrefix"
+                    android:textAlignment="viewStart"
                     android:textColorHint="@color/viewBackground"
                     android:layout_weight="1"
                     android:background="@android:color/transparent"
@@ -70,15 +69,15 @@
 
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_height="35dp"
+                    android:layout_height="33dp"
                     android:layout_weight="1"
                     android:background="@drawable/text_background"
                     android:layoutDirection="rtl"
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
                         android:layout_margin="1dp"
                         android:background="@color/colorPrimary"
                         android:padding="4dp"
@@ -92,7 +91,7 @@
                         android:layout_weight="1"
                         android:textColorHint="@color/viewBackground"
                         android:background="@android:color/transparent"
-                        fontPath="fonts/BCN_Medium.otf"
+                        fontPath="fonts/Tajawal-Bold.ttf"
                         tools:ignore="MissingPrefix"
                         android:textAlignment="viewStart"
                         android:hint="@string/phone"
@@ -116,7 +115,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
+                android:layout_height="33dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="15dp"
@@ -125,8 +124,8 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
                     android:layout_margin="1dp"
                     android:background="@color/colorPrimary"
                     android:padding="4dp"
@@ -138,8 +137,9 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="6dp"
                     android:layout_weight="1"
-                    fontPath="fonts/BCN_Medium.otf"
+                    fontPath="fonts/Tajawal-Bold.ttf"
                     tools:ignore="MissingPrefix"
+                    android:textAlignment="viewStart"
                     android:textColorHint="@color/viewBackground"
                     android:background="@android:color/transparent"
                     android:hint="@string/email"
@@ -150,7 +150,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
+                android:layout_height="33dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="15dp"
@@ -159,8 +159,8 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
                     android:layout_margin="1dp"
                     android:background="@color/colorPrimary"
                     android:padding="4dp"
@@ -176,8 +176,7 @@
                     android:hint="@string/country"
                     android:textColorHint="@color/viewBackground"
                     android:inputType="text"
-                    fontPath="fonts/BCN_Medium.otf"
-                    tools:ignore="MissingPrefix"
+                    android:textAlignment="viewStart"
                     android:padding="4dp"
                     android:textSize="16sp" />
 
@@ -198,7 +197,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
+                android:layout_height="33dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="15dp"
@@ -207,8 +206,8 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
                     android:layout_margin="1dp"
                     android:background="@color/colorPrimary"
                     android:padding="4dp"
@@ -230,8 +229,7 @@
                         android:hint="@string/city"
                         android:inputType="text"
                         android:textColorHint="@color/viewBackground"
-                        fontPath="fonts/BCN_Medium.otf"
-                        tools:ignore="MissingPrefix"
+                        android:textAlignment="viewStart"
                         android:padding="4dp"
                         android:textSize="16sp" />
 
@@ -259,7 +257,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
+                android:layout_height="33dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="15dp"
@@ -268,8 +266,8 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
                     android:layout_margin="1dp"
                     android:background="@color/colorPrimary"
                     android:padding="4dp"
@@ -291,8 +289,7 @@
                         android:inputType="text"
                         android:padding="4dp"
                         android:textColorHint="@color/viewBackground"
-                        fontPath="fonts/BCN_Medium.otf"
-                        tools:ignore="MissingPrefix"
+                        android:textAlignment="viewStart"
                         android:textSize="16sp" />
 
                     <Spinner
@@ -318,7 +315,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
+                android:layout_height="33dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="15dp"
@@ -327,8 +324,8 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
                     android:layout_margin="1dp"
                     android:background="@color/colorPrimary"
                     android:padding="4dp"
@@ -344,8 +341,7 @@
                     android:background="@android:color/transparent"
                     android:hint="@string/street_address"
                     android:inputType="text"
-                    fontPath="fonts/BCN_Medium.otf"
-                    tools:ignore="MissingPrefix"
+                    android:textAlignment="viewStart"
                     android:textColorHint="@color/viewBackground"
                     android:padding="4dp"
                     android:textSize="16sp" />
@@ -362,7 +358,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="15dp"
                 android:text="@string/aditional_info"
-                android:textColor="#ff555555"
+                android:textColor="@color/textGrayColor"
                 android:textSize="13sp"
                 android:textStyle="bold" />
             <LinearLayout
@@ -384,7 +380,8 @@
                     android:inputType="textMultiLine"
                     android:lines="8"
                     android:maxLines="10"
-                    fontPath="fonts/BCN_Medium.otf"
+                    android:textAlignment="viewStart"
+                    fontPath="fonts/Tajawal-Bold.ttf"
                     android:textColorHint="@color/viewBackground"
                     tools:ignore="MissingPrefix"
                     android:minLines="4"
@@ -402,11 +399,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_marginBottom="15dp"
-                android:layout_marginTop="35dp"
+                android:layout_marginTop="33dp"
                 android:layout_marginRight="15dp"
-                android:elevation="@dimen/_6sdp"
-                app:cardCornerRadius="@dimen/_6sdp"
-                app:cardElevation="@dimen/_4sdp"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="2dp"
                 app:cardBackgroundColor="@color/colorPrimary"
                 >
                 <TextView

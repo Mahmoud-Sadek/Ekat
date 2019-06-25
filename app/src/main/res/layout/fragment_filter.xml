@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/_15sdp"
-            android:background="@drawable/search_background">
+            android:background="@drawable/filter_background">
 
             <Spinner
                 android:id="@+id/filter_spinner"
@@ -34,6 +34,8 @@
             android:layout_height="@dimen/_24sdp"
             app:count="100"
             app:end="100"
+            app:activeLineColor="@color/textGrayColor"
+            app:activeThumbColor="@color/textprimaryColor"
             app:minDistance="1"
             app:movable="true"
             app:start="0" />
@@ -41,50 +43,62 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/filter_max_txt"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:gravity="center"
-                android:text="100"
+                android:textSize="18sp"
+                android:text="سعر" />
+
+            <TextView
+                android:id="@+id/filter_min_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:gravity="center"
                 fontPath="fonts/BCN_Medium.otf"
                 tools:ignore="MissingPrefix"
-                android:textSize="18sp"/>
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="0 د.أ" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:textSize="28sp"
-                android:text="-" />
-
+                android:text="-"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"/>
             <TextView
-                android:id="@+id/filter_min_txt"
-                android:layout_width="0dp"
+                android:id="@+id/filter_max_txt"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="18sp"
                 android:gravity="center"
+                android:text="100 د.أ"
                 fontPath="fonts/BCN_Medium.otf"
                 tools:ignore="MissingPrefix"
-                android:text="0" />
+                android:textSize="18sp"/>
+
+
 
         </LinearLayout>
 
         <Button
             android:id="@+id/confirm_btn"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="42dp"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="35dp"
             android:layout_marginRight="15dp"
             android:background="@drawable/bottun_primary"
             android:text="@string/filter"
             android:textColor="@android:color/white"
-            android:textSize="22sp"
+            android:textSize="18sp"
+            android:layout_marginBottom="@dimen/_30sdp"
             android:textStyle="bold" />
     </LinearLayout>
 
